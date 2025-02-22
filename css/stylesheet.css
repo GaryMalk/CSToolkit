@@ -24,11 +24,10 @@ header > nav > ul {
 }
   
 header > nav li {
-    font-size: 1.2em;
     display: inline-block;
     border: 4px solid #46681E;
     padding: 6px;
-    margin: 4px;
+    margin: 3px;
     border-radius: 10px;
     background-color: #6E95B4;
 }
