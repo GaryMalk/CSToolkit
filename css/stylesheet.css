@@ -6,43 +6,39 @@ body {
     color: #20055e;
 }
 
+a {
+  color: #FFFF66;
+}
+
 header {
     margin: auto;
     text-align: center;
     color: #f0f052;
 }
 
-header h1 {
+h1, h2 {
     font-family: "Luxurious Roman", serif;
     text-align: center;
     text-shadow: 3px 3px 0 #000, 2px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-header > nav > ul {
-    padding: 0px;
-    margin: 0px;
-}
-  
-header > nav li {
-    display: inline-block;
-    border: 4px solid #46681E;
-    padding: 6px;
-    margin: 3px;
-    border-radius: 10px;
-    background-color: #6E95B4;
+header > nav li:hover a {
+  background-color: #FFFF66; !important;
+  color: #6a86b4; !important;
 }
 
-header > nav li:hover, header > nav li:hover a {
-  background-color: yellow;
-  color: #6a86b4;
+header > nav > ul > li {
+	display: inline-block; !important;
 }
 
-header > nav a {
-    text-decoration: none;
-}
-
-a {
-  color: yellow;
+header > nav > ul a {
+    display: inline-block; !important;
+	text-decoration: none; !important;
+    border: 4px solid #46681E; !important;
+    padding: 5px; !important;
+    margin: 1px; !important;
+    border-radius: 10px; !important;
+    background-color: #6a86b4; !important;
 }
 
 div.images {
