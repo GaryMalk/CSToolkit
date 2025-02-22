@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Orienta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Orienta&display=swap');
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Orienta", serif;
     background-color: #859fe7;
     color: #20055e;
 }
@@ -13,7 +13,7 @@ header {
 }
 
 header h1 {
-    font-family: "Orienta", serif;
+    font-family: "Luxurious Roman", serif;
     text-align: center;
     text-shadow: 3px 3px 0 #000, 2px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
