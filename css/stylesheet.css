@@ -71,16 +71,16 @@ div.images img {
 
 div.block img {
     display: inline-block;
-    width: 30%;
+    width: 25%;
+    min-width: 100px;
     height: auto;
     vertical-align: middle;
-    margin-right: 1%;
-    margin-bottom: 0%;
 }
 
 div.about img {
     display: inline-block;
-    width: 33%;
+    width: 30%;
+    min-width: 200px;
     height: auto;
     vertical-align: middle;
     margin-left: 33%;
@@ -94,13 +94,15 @@ div.center {
 
 div.block {
     display: inline-block;
-    width: 29%;
+    width: 25%;
+    min-width: 300px;
     margin:auto;
 }
 
 div.about {
     display: inline-block;
     width: 42%;
+    min-width: 400px;
     margin:auto;
     text-align: left;
     padding: 2%;
@@ -113,7 +115,7 @@ img.border {
 }
 
 footer {
-    width: 75%;
+    width: 85%;
     margin: auto;
     font-size: .8em;
     text-align: center;
@@ -124,16 +126,112 @@ section.image_use {
     margin-left: 20%;
 }
 
-article#one {
+article {
+    display:inline-block;
+    width: 90%;
+    height: fit-content;
+    text-align: left;
+    font-size: 1.1em;
+    background-color: azure;
+    margin: 25px;
+    padding: 20px;
+}
+
+article#home {
     display:inline-block;
     width: 60%;
+    background-color: #A0B4EE;
     text-align: center;
     font-size: 1.1em;
 }
 
 article#about {
     display:inline-block;
+    box-sizing: border-box;
+    background-color: #A0B4EE;
     width: 40%;
     text-align: center;
     font-size: 1.2em;
+}
+
+div.left {
+    display: inline-block;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 75%;
+    height:fit-content;
+    padding: 20px;
+    margin-left: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+div.right {
+    float: right;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 75%;
+    height:fit-content;
+    padding: 20px;
+    margin-right: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+div.textbooks {
+    display: inline-block;
+}
+
+div.textbooks div.left {
+    background-color: rgb(235, 147, 147);
+}
+
+div.textbooks div.right {
+    background-color: rgb(205, 219, 240);
+}
+
+div.resources {
+    display: inline-block;
+}
+
+div.resources div.left {
+    background-color: rgb(6, 38, 87);
+    color: azure;
+}
+
+div.resources div.left ul {
+    list-style-image: url('../images/white_arrow.png');
+}
+
+div.resources div.right {
+    background-color: rgb(202, 252, 235);
+}
+
+div.tools {
+    display: inline-block;
+}
+
+div.tools div.left {
+    background-color: rgb(48, 124, 236);
+    color: ivory;
+}
+
+div.tools div.left ul {
+    list-style-image: url('../images/white_arrow.png');
+}
+
+div.tools div.right {
+    background-color: rgb(169, 210, 243);
+}
+
+div.accessibility {
+    display: inline-block;
+}
+
+div.accessibility div.left {
+    background-color: rgb(223, 177, 223);
+}
+
+div.accessibility div.right {
+    background-color: rgb(208, 240, 234);    
 }
