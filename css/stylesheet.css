@@ -2,12 +2,16 @@
 
 body {
     font-family: "Orienta", serif;
-    background-color: #859fe7;
-    color: #20055e;
+    background-color: #A0B4EE;
+    color: #2B057B;
 }
 
 a {
-  color: #FFFF66;
+  color: black;
+}
+
+ul {
+    list-style-image: url('../images/Arrow_Blue_Right.png');
 }
 
 header {
@@ -16,29 +20,36 @@ header {
     color: #f0f052;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: "Luxurious Roman", serif;
     text-align: center;
+    color: #f0f052;
     text-shadow: 3px 3px 0 #000, 2px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-header > nav li:hover a {
-  background-color: #FFFF66; !important;
-  color: #6a86b4; !important;
+header > nav > ul > li {
+	display: inline-block !important;
 }
 
-header > nav > ul > li {
-	display: inline-block; !important;
+header > nav li a {
+    background-color: #264EB5 !important;
+    color: #f0f052 !important;
+}
+
+header > nav li:hover a {
+  background-color: #f0f052 !important;
+  color: #264EB5 !important;
 }
 
 header > nav > ul a {
-    display: inline-block; !important;
-	text-decoration: none; !important;
-    border: 4px solid #46681E; !important;
-    padding: 5px; !important;
-    margin: 1px; !important;
-    border-radius: 10px; !important;
-    background-color: #6a86b4; !important;
+    display: inline-block !important;
+	text-decoration: none !important;
+    font-size: 1.1em !important;
+    border: 4px solid #46681E !important;
+    padding: 5px !important;
+    margin: 1px !important;
+    border-radius: 10px !important;
+    background-color: #264EB5 !important;
 }
 
 div.images {
@@ -55,15 +66,36 @@ div > img {
     height: auto;
     vertical-align: middle;
     margin-right: 1%;
-    margin-bottom: 2%;
+    margin-bottom: 0%;
 }
 
-div.video {
+div.center {
     margin: auto;
+    text-align: center;
+    display:inline-block;
 }
 
 img {
     border-color: #20055e;
     border-style: solid;
     border-width: 5px;
+}
+
+footer {
+    width: 75%;
+    margin: auto;
+    font-size: .8em;
+    text-align: center;
+}
+
+section.image_use {
+    text-align: left;
+    margin-left: 20%;
+}
+
+article#one {
+    display:inline-block;
+    width: 60%;
+    text-align: center;
+    font-size: 1.1em;
 }
