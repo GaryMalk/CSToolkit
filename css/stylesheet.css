@@ -106,7 +106,7 @@ div.about {
 }
 
 div.about img {
-    width: 30%;
+    width: 40%;
     min-width: 200px;
     height: auto;
     vertical-align: middle;
@@ -241,6 +241,14 @@ div.accessibility {
 
 div.accessibility div.left {
     background-color: rgb(208, 240, 234);
+    width: 64%;
+}
+
+div.accessibility img {
+    float: right;
+    vertical-align: middle;
+    width: 25%;
+    margin-right: 3%;
 }
 
 div.accessibility div.right {
