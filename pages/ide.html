@@ -25,65 +25,85 @@
         </nav>
     </header>
 
-    <h2><strong>IDEs - All Free</strong></h2>
-    <ol>
-        <li><a class="inline_disabled" href="https://www.jetbrains.com/idea/download/#section=windows" target="_blank"
-                rel="noopener">IntelliJ IDEA </a><strong><a class="inline_disabled"
-                    href="https://www.jetbrains.com/idea/download/#section=windows" target="_blank"
-                    rel="noopener">Community Edition</a> </strong>(Will be used during class demos).
-            <ul style="list-style-type: disc;">
-                <li>See how to download JDK directly from IntelliJ <a class="inline_disabled"
-                        href="https://www.jetbrains.com/help/idea/sdk.html#set-up-jdk" target="_blank"
-                        rel="noopener">here</a></li>
-            </ul>
-        </li>
-        <li><a class="inline_disabled"
-                href="https://spider.eng.auburn.edu/user-cgi/grasp/grasp.pl?;dl=download_jgrasp.html" target="_blank"
-                rel="noopener">jGrasp</a>&nbsp; (Will be used during class demos) - have to download JDK separately (or
-            have it already installed on your computer) and set the environmental variables. See how to do it all below.
-        </li>
-        <li><a href="https://www.eclipse.org/downloads/">Eclipse </a>- download comes with the latest version of JDK
-        </li>
-        <li><a href="https://code.visualstudio.com/">Visual Studio Code</a> - IDE can be configured to work with Java
-            (<a
-                href="https://code.visualstudio.com/docs/languages/java">https://code.visualstudio.com/docs/languages/java</a>)&nbsp;
-        </li>
-    </ol>
-    <p><strong>Download JDK from Oracle if needed</strong></p>
-    <ul>
-        <li><a
-                href="https://www.oracle.com/java/technologies/javase-downloads.html">https://www.oracle.com/java/technologies/javase-downloads.html</a>
-        </li>
-    </ul>
-    <p>After you install JDK, you will need to change your system <strong>environmental variables</strong> so that JDK
-        is visible to your IDE.</p>
-    <p>Here is a relatively good video of this process for Windows 10:</p>
+    <div class="ide">
+        <div class="left">
+            <h2><strong>IDEs - All Free</strong></h2>
 
-    <div class="video">
-        <iframe width="700" height="394" src="https://www.youtube.com/embed/IJ-PJbvJBGs?si=pHAPJQjl71R7p_OG"
-            title="How to Install Java JDK on Windows 10 (with JAVA_HOME) (2020)" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-            data-preview-alt="How to Install Java JDK on Windows 10 (with JAVA_HOME) (2020)"></iframe>
+
+            <ol>
+                <li><a class="inline_disabled" href="https://www.jetbrains.com/idea/download/#section=windows"
+                        target="_blank" rel="noopener">IntelliJ IDEA </a><strong><a class="inline_disabled"
+                            href="https://www.jetbrains.com/idea/download/#section=windows" target="_blank"
+                            rel="noopener">Community Edition</a> </strong>(Will be used during class demos).
+                    <ul style="list-style-type: disc;">
+                        <li>See how to download JDK directly from IntelliJ <a class="inline_disabled"
+                                href="https://www.jetbrains.com/help/idea/sdk.html#set-up-jdk" target="_blank"
+                                rel="noopener">here</a></li>
+                    </ul>
+                </li>
+                <li><a class="inline_disabled"
+                        href="https://spider.eng.auburn.edu/user-cgi/grasp/grasp.pl?;dl=download_jgrasp.html"
+                        target="_blank" rel="noopener">jGrasp</a>&nbsp; (Will be used during class demos) - have to
+                    download
+                    JDK separately (or
+                    have it already installed on your computer) and set the environmental variables. See how to do it
+                    all
+                    below.
+                </li>
+                <li><a href="https://www.eclipse.org/downloads/">Eclipse </a>- download comes with the latest version of
+                    JDK
+                </li>
+                <li><a href="https://code.visualstudio.com/">Visual Studio Code</a> - IDE can be configured to work with
+                    Java
+                    (<a
+                        href="https://code.visualstudio.com/docs/languages/java">https://code.visualstudio.com/docs/languages/java</a>)&nbsp;
+                </li>
+            </ol>
+            <p><strong>Download JDK from Oracle if needed</strong></p>
+            <ul>
+                <li><a
+                        href="https://www.oracle.com/java/technologies/javase-downloads.html">https://www.oracle.com/java/technologies/javase-downloads.html</a>
+                </li>
+            </ul>
+            <p>After you install JDK, you will need to change your system <strong>environmental variables</strong> so
+                that
+                JDK
+                is visible to your IDE.</p>
+            <p>Here is a relatively good video of this process for Windows 10:</p>
+        </div>
+
+        <div class="video">
+            <iframe width="550" height="309" src="https://www.youtube.com/embed/IJ-PJbvJBGs?si=pHAPJQjl71R7p_OG"
+                title="How to Install Java JDK on Windows 10 (with JAVA_HOME) (2020)" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                data-preview-alt="How to Install Java JDK on Windows 10 (with JAVA_HOME) (2020)"></iframe>
+        </div>
+
+        <div class="right">
+            <h2><strong>Useful VS Code Tips</strong></h2>
+            <h3>Tip #1</h3>
+            <p>To stop VSCode from showing Java parameter names all the time:</p>
+            <ol>
+                <li>Go to File -&gt; Preferences -&gt; Settings</li>
+                <li>Search for "java.inlayHints.parameterNames.enabled"</li>
+                <li>Set it to "none".</li>
+            </ol>
+            <h3>Tip #2</h3>
+            <p><span>The code formatting is available in Visual Studio Code (VSCode) through the following shortcuts or
+                    key
+                    combinations:&nbsp;</span><strong>On Windows Shift + Alt + F</strong><span>. On macOS Shift + Option
+                    +
+                    F. On
+                    Linux Ctrl + Shift + I</span></p>
+        </div>
     </div>
 
-    <h2><strong>Useful VS Code Tips</strong></h2>
-    <h3>Tip #1</h3>
-    <p>To stop VSCode from showing Java parameter names all the time:</p>
-    <ol>
-        <li>Go to File -&gt; Preferences -&gt; Settings</li>
-        <li>Search for "java.inlayHints.parameterNames.enabled"</li>
-        <li>Set it to "none".</li>
-    </ol>
-    <h3>Tip #2</h3>
-    <p><span>The code formatting is available in Visual Studio Code (VSCode) through the following shortcuts or key
-            combinations:&nbsp;</span><strong>On Windows Shift + Alt + F</strong><span>. On macOS Shift + Option + F. On
-            Linux Ctrl + Shift + I</span></p>
-
-
     <footer>
-		<p>Computer Science Teacher Toolkit © 2025 by Gary Malkasian and Max Brown is licensed under Creative Commons Attribution 4.0 International
-        <br><a href="about.html">About Us</a></p>
+        <p>Computer Science Teacher Toolkit © 2025 by Gary Malkasian and Max Brown is licensed under Creative Commons
+            Attribution 4.0 International
+            <br><a href="about.html">About Us</a>
+        </p>
     </footer>
 </body>
 
