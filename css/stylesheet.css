@@ -82,7 +82,7 @@ div.cwu {
 
 div.cwu img {
     width: 12%;
-    min-width: 100px;
+    min-width: 150px;
     height: auto;
     vertical-align: middle;
 }
@@ -97,7 +97,7 @@ img#seal {
     margin-right: 10%;
 }
 
-div.about {
+div.bio {
     display: inline-block;
     width: 42%;
     min-width: 400px;
@@ -105,14 +105,14 @@ div.about {
     padding: 2%;
 }
 
-div.about img {
-    width: 40%;
+div.bio img {
+    width: 50%;
     min-width: 200px;
     height: auto;
     vertical-align: middle;
 }
 
-div.about p {
+div.bio p {
     text-align: left;
 }
 
@@ -146,7 +146,6 @@ article {
 }
 
 article#home {
-    display:inline-block;
     width: 60%;
     background-color: #A0B4EE;
     text-align: center;
@@ -156,13 +155,11 @@ article#home {
 }
 
 article#about {
-    display:inline-block;
-    box-sizing: border-box;
     background-color: #A0B4EE;
+	font-size: 1.2em;
+    box-sizing: border-box;
     width: 45%;
     min-width: 300px;
-    text-align: left;
-    font-size: 1.2em;
 }
 
 div.left {
@@ -280,3 +277,25 @@ div.ide div.video iframe {
     margin-right: 10%;
     vertical-align: center;
 }
+
+@media only screen and (max-width: 1035px) {
+
+    img#wildcat {
+        float: none;
+        display: inline-block;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    img#seal {
+        float: none;
+        display: inline-block;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    article#about {
+        width: 75%;
+        min-width: 300px;
+    }
+  }
