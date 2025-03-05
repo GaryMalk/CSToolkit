@@ -28,6 +28,10 @@ h1, h2, h3 {
     text-shadow: 3px 3px 0 #000, 2px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+h3 {
+    text-align: left;
+}
+
 header > nav > ul > li {
 	display: inline-block !important;
 }
@@ -208,6 +212,11 @@ div.resources div.left {
     color: azure;
 }
 
+div.resources div.left a {
+    color: #f0f052;
+}
+
+
 div.resources div.left ul {
     list-style-image: url('../images/white_arrow.png');
 }
@@ -223,6 +232,10 @@ div.tools {
 div.tools div.left {
     background-color: rgb(48, 124, 236);
     color: ivory;
+}
+
+div.tools div.left a {
+    color: #f0f052;
 }
 
 div.tools div.left ul {
@@ -259,7 +272,7 @@ div.ide {
 
 div.ide div.left {
     background-color: rgb(228, 217, 247);
-    width: 60%;
+    width: 48%;
     margin-left: 1%;
 }
 
@@ -270,8 +283,7 @@ div.ide div.right {
 
 div.ide > div.video {
     float: right;
-    width: 35%;
-    min-width: 400px;
+    width: 48%;
     margin-top: 2%;
     margin-right: 1%;
     margin-bottom: 1%;
@@ -298,7 +310,7 @@ div.video > div > iframe{
 }
 
 
-@media only screen and (max-width: 1035px) {
+@media only screen and (max-width: 1070px) {
 
     img#wildcat {
         float: none;
@@ -317,5 +329,22 @@ div.video > div > iframe{
     article#about {
         width: 75%;
         min-width: 300px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    div.ide > div.left {
+        width: 90%;
+        margin-left: 1%;
+    }
+
+    div.ide > div.right {
+        width: 90%;
+        margin-right: 1%;
+    }
+
+    div.ide > div.video {
+        width: 90%;
     }
   }
