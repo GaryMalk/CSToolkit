@@ -298,6 +298,7 @@ div.ide div.left {
 
 div.ide div.right {
     background-color: rgb(208, 230, 254);
+    width: 48%;
     margin-right: 1%;
 }
 
