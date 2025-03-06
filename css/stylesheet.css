@@ -298,8 +298,10 @@ div.ide div.left {
 
 div.ide div.right {
     background-color: rgb(208, 230, 254);
-    width: 48%;
+    width: 90%;
     margin-right: 1%;
+    margin-top: 7%;
+    padding-bottom: 20px;;
 }
 
 div.ide > div.video {
