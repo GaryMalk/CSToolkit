@@ -329,8 +329,25 @@ div.video > div > iframe{
     height: 100%;
 }
 
+div#keyboard {
+    display: inline-block;
+}
+
+img#keyboard {
+    min-width: 400px;
+}
 
 @media only screen and (max-width: 1070px) {
+
+    div.accessibility div.left {
+        width: 85%;
+        margin-left: 1%;
+    }
+    
+    div.accessibility div.right {
+        width: 85%;
+        margin-right: 1%;
+    }
 
     img#wildcat {
         float: none;
