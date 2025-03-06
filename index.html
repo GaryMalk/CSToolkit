@@ -26,7 +26,9 @@
 	</header>
 
 	<div class="images">
-		<img src="images/study.jpg" alt="A diverse group of students is deeply focused on their computer screens in a modern classroom setting." class="border">
+		<img src="images/study.jpg"
+			alt="A diverse group of students is deeply focused on their computer screens in a modern classroom setting"
+			class="border">
 		<img src="images/udl_cartoon.jpg" alt="A diagram of Universal Design for Learning" class="border">
 	</div>
 	<div class="center">
@@ -35,27 +37,60 @@
 			for use by High School Computer Science Educators,
 			especially those teaching Java, C#, Python, HTML, CSS, and JavaScript.
 		</article>
+
 	</div>
 	<div class="images">
 		<img src="images/BrailleKeyboard.jpg" alt="a braille keyboard for computers being typed upon" class="border">
 		<img src="images/students.jpg" alt="group of four people gathered on a table using laptops" class="border">
 	</div>
 
+	<div class="slideshow">
+		<img id="slides" src="images/study.jpg"
+			alt="A diverse group of students is deeply focused on their computer screens in a modern classroom setting"
+			class="border">
+	</div>
+
 	<footer>
-		<p>Alacrity Computer Science Teacher Toolkit © 2025 by Gary Malkasian and Max Brown is licensed under Creative Commons
-			Attribution 4.0 International
+		<p>Alacrity Computer Science Teacher Toolkit © 2025 by Gary Malkasian and Max Brown is licensed under Creative
+			Commons Attribution 4.0 International
 			<br><a href="pages/about.html">About Us</a>
 		</p>
 
 		<section class="attribution">
 			<p>Use of images on this page:
-				<br>PD: <a href="https://stockcake.com/i/students-using-computers_826013_1089570" target="_blank">Diverse Students Using Computers</a>
-				<br>CC: <a href="https://www.flickr.com/photos/gforsythe/8527950743"target="_blank">Universal Design for Learning</a> by Giulia Forsythe; image cropped & skewed to fit and resolution changed
-				<br>CC: <a href="https://www.flickr.com/photos/rosenfeldmedia/50511174953"target="_blank">Braille Keyboard</a> by Platz, Cheryl, 2020. Design Beyond Devices: Creating Multimodal, Cross-Device Experiences. New York: Rosenfeld Media; resolution changed
-				<br>PD: <a href="https://www.pickpik.com/people-laptop-office-advice-report-work-73918"target="_blank">Office Advice Report Work Preview</a> (group of four people gathered on a table using laptops)
+				<br>PD: <a href="https://stockcake.com/i/students-using-computers_826013_1089570"
+					target="_blank">Diverse Students Using Computers</a>
+				<br>CC: <a href="https://www.flickr.com/photos/gforsythe/8527950743" target="_blank">Universal Design
+					for Learning</a> by Giulia Forsythe; image cropped & skewed to fit and resolution changed
+				<br>CC: <a href="https://www.flickr.com/photos/rosenfeldmedia/50511174953" target="_blank">Braille
+					Keyboard</a> by Platz, Cheryl, 2020. Design Beyond Devices: Creating Multimodal, Cross-Device
+				Experiences. New York: Rosenfeld Media; resolution changed
+				<br>PD: <a href="https://www.pickpik.com/people-laptop-office-advice-report-work-73918"
+					target="_blank">Office Advice Report Work Preview</a> (group of four people gathered on a table
+				using laptops)
 			</p>
 		</section>
 	</footer>
+
+	<script>
+		var index = 1; // start at 1 because element is already set to initial image
+		function updateImage() {
+			var image = document.getElementById("slides");
+			var images = ["images/study.jpg", "images/udl_cartoon.jpg", "images/BrailleKeyboard.jpg", "images/students.jpg"];
+			var alt_text = ["A diverse group of students is deeply focused on their computer screens in a modern classroom setting",
+				"A diagram of Universal Design for Learning",
+				"a braille keyboard for computers being typed upon",
+				"group of four people gathered on a table using laptops"];
+			
+			image.src = images[index];
+			image.alt = alt_text[index];
+			index = (index + 1) % images.length;
+		}
+
+		window.onload = function () {
+			setInterval(updateImage, 4000);
+		};
+	</script>
 </body>
 
 </html>

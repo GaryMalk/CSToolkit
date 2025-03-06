@@ -80,6 +80,20 @@ div.center {
     display:inline-block;
 }
 
+/* play only on mobile */
+div.slideshow {
+    display: none;
+}
+
+div.slideshow img {
+    display: block;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
 div.cwu {
     display: inline-block;
     margin:auto;
@@ -135,8 +149,14 @@ footer {
 }
 
 section.attribution {
+    display: inline-block;
     text-align: left;
-    margin-left: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.attribution p {
+    text-align: left;
 }
 
 article {
@@ -346,5 +366,13 @@ div.video > div > iframe{
 
     div.ide > div.video {
         width: 90%;
+    }
+
+    div.images {
+        display: none;
+    }
+
+    div.slideshow {
+        display: block;
     }
   }
