@@ -216,11 +216,11 @@ div.textbooks {
 }
 
 div.textbooks div.left {
-    background-color: #f7dde5;
+    background-color: rgb(255, 237, 233);
 }
 
 div.textbooks div.right {
-    background-color: rgb(205, 219, 240);
+    background-color: rgb(208, 240, 234);
 }
 
 div.resources {
@@ -236,7 +236,6 @@ div.resources div.right a {
     color: #f0f052;
 }
 
-
 div.resources div.right ul {
     list-style-image: url('../images/white_arrow.png');
 }
@@ -247,34 +246,23 @@ div.resources div.left {
     margin-left: 4%;
 }
 
-div.tools {
-    display: inline-block;
-}
-
-div.tools div.left {
-    background-color: rgb(48, 124, 236);
-    color: ivory;
-}
-
-div.tools div.left a {
-    color: #f0f052;
-}
-
-div.tools div.left ul {
-    list-style-image: url('../images/white_arrow.png');
-}
-
-div.tools div.right {
-    background-color: rgb(169, 210, 243);
-}
-
 div.accessibility {
     display: inline-block;
 }
 
 div.accessibility div.left {
-    background-color: rgb(208, 240, 234);
-    width: 64%;
+    background-color: rgb(48, 124, 236);
+    color: ivory;
+    width: 62%;
+    margin-left: 2%;
+}
+
+div.accessibility div.left a {
+    color: #f0f052;
+}
+
+div.accessibility div.left ul {
+    list-style-image: url('../images/white_arrow.png');
 }
 
 div.accessibility img {
@@ -285,7 +273,7 @@ div.accessibility img {
 }
 
 div.accessibility div.right {
-    background-color: rgb(255, 237, 233);
+    background-color: rgb(169, 210, 243);
 }
 
 div.ide {
