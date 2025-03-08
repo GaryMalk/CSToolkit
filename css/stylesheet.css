@@ -398,7 +398,7 @@ img#keyboard {
 
     div.video iframe {
         float: none;
-        margin-right: none;
+        margin-right: 0;
     }
 
     div.images {
