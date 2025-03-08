@@ -312,6 +312,9 @@ div.video iframe {
     float: right;
     margin-right: 10%;
     vertical-align: center;
+    border: none;
+    width: 100%;
+    height: auto;
 }
 
 div.video>div {
@@ -388,7 +391,14 @@ img#keyboard {
     }
 
     div.video {
-        width: 90%;
+        float: none;
+        width: 100%;
+        margin: auto;
+    }
+
+    div.video iframe {
+        float: none;
+        margin-right: none;
     }
 
     div.images {
