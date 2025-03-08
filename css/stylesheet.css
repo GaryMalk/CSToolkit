@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: black;
+    color: black;
 }
 
 ul {
@@ -21,7 +21,9 @@ header {
     color: #f0f052;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: "Luxurious Roman", serif;
     text-align: center;
     color: #f0f052;
@@ -32,23 +34,23 @@ h3 {
     text-align: left;
 }
 
-header > nav > ul > li {
-	display: inline-block !important;
+header>nav>ul>li {
+    display: inline-block !important;
 }
 
-header > nav li a {
+header>nav li a {
     background-color: #264EB5 !important;
     color: #f0f052 !important;
 }
 
-header > nav li:hover a {
-  background-color: #f0f052 !important;
-  color: #264EB5 !important;
+header>nav li:hover a {
+    background-color: #f0f052 !important;
+    color: #264EB5 !important;
 }
 
-header > nav > ul a {
+header>nav>ul a {
     display: inline-block !important;
-	text-decoration: none !important;
+    text-decoration: none !important;
     font-size: 1.1em !important;
     border: 4px solid #46681E !important;
     padding: 5px !important;
@@ -77,7 +79,7 @@ div.images img {
 div.center {
     margin: auto;
     text-align: center;
-    display:inline-block;
+    display: inline-block;
 }
 
 /* play only on mobile */
@@ -96,7 +98,7 @@ div.slideshow img {
 
 div.cwu {
     display: inline-block;
-    margin:auto;
+    margin: auto;
 }
 
 div.cwu img {
@@ -120,7 +122,7 @@ div.bio {
     display: inline-block;
     width: 42%;
     min-width: 400px;
-    margin:auto;
+    margin: auto;
     padding: 2%;
 }
 
@@ -148,19 +150,19 @@ footer {
     text-align: center;
 }
 
-section.attribution {
+div.attribution {
     display: inline-block;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
 }
 
-section.attribution p {
+div.attribution p {
     text-align: left;
 }
 
 article {
-    display:inline-block;
+    display: inline-block;
     width: 90%;
     height: fit-content;
     text-align: left;
@@ -170,18 +172,20 @@ article {
     padding: 20px;
 }
 
-article#home {
+#home {
+    display: inline-block;
     width: 60%;
-    background-color: #A0B4EE;
+    min-width: 300px;
     text-align: center;
     font-size: 1.1em;
     margin: 0px;
     padding: 0px;
 }
 
-article#about {
+#about {
+    display: inline-block;
     background-color: #A0B4EE;
-	font-size: 1.2em;
+    font-size: 1.2em;
     box-sizing: border-box;
     width: 45%;
     min-width: 300px;
@@ -192,7 +196,7 @@ div.left {
     padding: 5px;
     box-sizing: border-box;
     width: 75%;
-    height:fit-content;
+    height: fit-content;
     padding: 20px;
     margin-left: 5%;
     margin-top: 1%;
@@ -204,7 +208,7 @@ div.right {
     padding: 5px;
     box-sizing: border-box;
     width: 75%;
-    height:fit-content;
+    height: fit-content;
     padding: 20px;
     margin-right: 5%;
     margin-top: 1%;
@@ -291,7 +295,8 @@ div.ide div.right {
     width: 90%;
     margin-right: 1%;
     margin-top: 7%;
-    padding-bottom: 20px;;
+    padding-bottom: 20px;
+    ;
 }
 
 div.video {
@@ -309,15 +314,16 @@ div.video iframe {
     vertical-align: center;
 }
 
-div.video > div {
+div.video>div {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 ratio required for YouTube videos */
+    padding-bottom: 56.25%;
+    /* 16:9 ratio required for YouTube videos */
 }
 
-div.video > div > iframe{
+div.video>div>iframe {
     position: absolute;
     top: 0;
-    left: 0; 
+    left: 0;
     width: 100%;
     height: 100%;
 }
@@ -336,7 +342,7 @@ img#keyboard {
         width: 85%;
         margin-left: 1%;
     }
-    
+
     div.accessibility div.right {
         width: 85%;
         margin-right: 1%;
@@ -348,7 +354,7 @@ img#keyboard {
         margin-left: 5%;
         margin-right: 5%;
     }
-    
+
     img#seal {
         float: none;
         display: inline-block;
@@ -356,7 +362,7 @@ img#keyboard {
         margin-right: 5%;
     }
 
-    article#about {
+    #about {
         width: 75%;
         min-width: 300px;
     }
@@ -364,14 +370,19 @@ img#keyboard {
 
 @media only screen and (max-width: 800px) {
 
-    div.ide > div.left,
-    div.resources > div.left {
+    #home {
+        margin-top: 1%;
+        margin-bottom: 3%;
+    }
+
+    div.ide>div.left,
+    div.resources>div.left {
         width: 90%;
         margin-left: 1%;
     }
 
-    div.ide > div.right,
-    div.resources > div.right {
+    div.ide>div.right,
+    div.resources>div.right {
         width: 90%;
         margin-right: 1%;
     }
@@ -387,4 +398,4 @@ img#keyboard {
     div.slideshow {
         display: block;
     }
-  }
+}
