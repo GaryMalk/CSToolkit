@@ -259,7 +259,7 @@ div.assessment {
 }
 
 div.assessment div.left {
-    width: 42%
+    width: 42%;
 }
 
 div.accessibility {
@@ -308,7 +308,6 @@ div.ide div.right {
     margin-right: 1%;
     margin-top: 7%;
     padding-bottom: 20px;
-    ;
 }
 
 div.video {
@@ -353,6 +352,14 @@ img#keyboard {
 
 @media only screen and (max-width: 1070px) {
 
+    div.assessment {
+        display: block;
+    }
+
+    div.assessment div.left {
+        width: 90%;
+    }
+
     div.accessibility div.left {
         width: 85%;
         margin-left: 1%;
@@ -390,20 +397,29 @@ img#keyboard {
         margin-bottom: 3%;
     }
 
-    div.ide>div.left,
-    div.resources>div.left {
-        width: 90%;
-        margin-left: 1%;
+    div.resources {
+        display: block;
+        width: 100%;
     }
 
+    div.textbooks>div.left,
+    div.ide>div.left,
+    div.resources>div.left {
+        width: 95%;
+        margin-left: 2%;
+    }
+
+    div.textbooks>div.right,
     div.ide>div.right {
-        width: 90%;
+        width: 95%;
         margin-right: 1%;
     }
 
     div.resources>div.right {
         width: 95%;
-        margin: none;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
     }
 
     div.video {
