@@ -201,6 +201,7 @@ div.left {
     margin-left: 5%;
     margin-top: 1%;
     margin-bottom: 1%;
+    overflow-wrap: break-word;
 }
 
 div.right {
@@ -213,6 +214,7 @@ div.right {
     margin-right: 5%;
     margin-top: 1%;
     margin-bottom: 1%;
+    overflow-wrap: break-word;
 }
 
 div.textbooks {
@@ -384,10 +386,14 @@ img#keyboard {
         margin-left: 1%;
     }
 
-    div.ide>div.right,
-    div.resources>div.right {
+    div.ide>div.right {
         width: 90%;
         margin-right: 1%;
+    }
+
+    div.resources>div.right {
+        width: 95%;
+        margin: none;
     }
 
     div.video {
