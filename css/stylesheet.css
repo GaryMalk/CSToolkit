@@ -201,6 +201,7 @@ div.left {
     margin-left: 5%;
     margin-top: 1%;
     margin-bottom: 1%;
+    overflow-wrap: break-word;
 }
 
 div.right {
@@ -213,6 +214,7 @@ div.right {
     margin-right: 5%;
     margin-top: 1%;
     margin-bottom: 1%;
+    overflow-wrap: break-word;
 }
 
 div.textbooks {
@@ -322,6 +324,9 @@ div.video iframe {
     float: right;
     margin-right: 10%;
     vertical-align: center;
+    border: none;
+    width: 100%;
+    height: auto;
 }
 
 div.video>div {
@@ -391,14 +396,25 @@ img#keyboard {
         margin-left: 1%;
     }
 
-    div.ide>div.right,
-    div.resources>div.right {
+    div.ide>div.right {
         width: 90%;
         margin-right: 1%;
     }
 
+    div.resources>div.right {
+        width: 95%;
+        margin: none;
+    }
+
     div.video {
-        width: 90%;
+        float: none;
+        width: 100%;
+        margin: auto;
+    }
+
+    div.video iframe {
+        float: none;
+        margin-right: 0;
     }
 
     div.images {
