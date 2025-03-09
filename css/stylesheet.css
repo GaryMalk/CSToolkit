@@ -93,7 +93,7 @@ div.slideshow img {
     margin-bottom: 1%;
     margin-left: auto;
     margin-right: auto;
-    width: 75%;
+    width: 85%;
 }
 
 div.cwu {
@@ -401,6 +401,7 @@ img#keyboard {
 @media only screen and (max-width: 800px) {
 
     #home {
+        width: 75%;
         margin-top: 1%;
         margin-bottom: 3%;
     }
