@@ -252,6 +252,16 @@ div.resources div.left {
     margin-left: 4%;
 }
 
+div.assessment {
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+}
+
+div.assessment div.left {
+    width: 42%
+}
+
 div.accessibility {
     display: inline-block;
 }
