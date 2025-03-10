@@ -252,6 +252,20 @@ div.resources div.left {
     margin-left: 4%;
 }
 
+div.learning {
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+}
+
+div.learning div.left {
+    width: 42%;
+}
+
+div.learning div.right {
+    width: 42%;
+}
+
 div.assessment {
     margin: auto;
     text-align: center;
@@ -259,6 +273,10 @@ div.assessment {
 }
 
 div.assessment div.left {
+    width: 35%;
+}
+
+div.assessment div.right {
     width: 42%;
 }
 
@@ -290,6 +308,7 @@ div.accessibility img {
 
 div.accessibility div.right {
     background-color: rgb(169, 210, 243);
+    width: 42%
 }
 
 div.ide {
