@@ -122,6 +122,7 @@ div.bio {
     display: inline-block;
     width: 42%;
     min-width: 400px;
+    vertical-align: top;
     margin: auto;
     padding: 2%;
 }
