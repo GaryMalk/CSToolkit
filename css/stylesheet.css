@@ -59,6 +59,10 @@ header>nav>ul a {
     background-color: #264EB5 !important;
 }
 
+table {
+    border-spacing: 8px;
+}
+
 div.images {
     width: 95%;
     display: inline-block;
