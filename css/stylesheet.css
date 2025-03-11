@@ -5,6 +5,8 @@ body {
     font-family: "Orienta", serif;
     background-color: #A0B4EE;
     color: #2B057B;
+    letter-spacing: .5px;
+    line-height: 1.5;
 }
 
 a {
