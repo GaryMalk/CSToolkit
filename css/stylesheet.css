@@ -192,8 +192,17 @@ article {
     min-width: 300px;
 }
 
-div.left {
+code {
     display: inline-block;
+    color: black;
+    background-color: white;
+    padding: 2%;
+    margin-left: 3%;
+    width: 90%;
+}
+
+div.left {
+    float: left;
     padding: 5px;
     box-sizing: border-box;
     width: 75%;
@@ -218,6 +227,16 @@ div.right {
     overflow-wrap: break-word;
 }
 
+div.left.media {
+    width: 42%;
+    margin-left: 4%;
+}
+
+div.right.media {
+    width: 49%;
+    margin-right: 4%;
+}
+
 div.textbooks {
     display: inline-block;
 }
@@ -234,6 +253,10 @@ div.resources {
     display: inline-block;
 }
 
+div.resources div.left {
+    background-color: rgb(202, 252, 235);
+}
+
 div.resources div.right {
     background-color: rgb(6, 38, 87);
     color: azure;
@@ -247,10 +270,45 @@ div.resources div.right ul {
     list-style-image: url('../images/white_arrow.png');
 }
 
-div.resources div.left {
-    background-color: rgb(202, 252, 235);
-    width: 42%;
-    margin-left: 4%;
+div.ide {
+    display: inline-block;
+}
+
+div.ide div.left {
+    background-color: rgb(228, 217, 247);
+}
+
+div.ide div.right {
+    background-color: rgb(208, 230, 254);
+}
+
+div.accessibility {
+    display: inline-block;
+}
+
+div.accessibility div.right {
+    background-color: rgb(48, 124, 236);
+    color: ivory;
+}
+
+div.accessibility div.right a {
+    color: #f0f052;
+}
+
+div.accessibility div.right ul {
+    list-style-image: url('../images/white_arrow.png');
+}
+
+div.accessibility div.left {
+    background-color: rgb(169, 210, 243);
+}
+
+div#keyboard {
+    float: right;
+ }
+
+div#keyboard img {
+    width: 60%;
 }
 
 div.learning {
@@ -259,75 +317,10 @@ div.learning {
     display: inline-block;
 }
 
-div.learning div.left {
-    width: 42%;
-}
-
-div.learning div.right {
-    width: 42%;
-}
-
 div.assessment {
     margin: auto;
     text-align: center;
     display: inline-block;
-}
-
-div.assessment div.left {
-    width: 35%;
-}
-
-div.assessment div.right {
-    width: 42%;
-}
-
-div.accessibility {
-    display: inline-block;
-}
-
-div.accessibility div.left {
-    background-color: rgb(48, 124, 236);
-    color: ivory;
-    width: 62%;
-    margin-left: 2%;
-}
-
-div.accessibility div.left a {
-    color: #f0f052;
-}
-
-div.accessibility div.left ul {
-    list-style-image: url('../images/white_arrow.png');
-}
-
-div.accessibility img {
-    float: right;
-    vertical-align: middle;
-    width: 25%;
-    margin-right: 3%;
-}
-
-div.accessibility div.right {
-    background-color: rgb(169, 210, 243);
-    width: 42%
-}
-
-div.ide {
-    display: inline-block;
-}
-
-div.ide div.left {
-    background-color: rgb(228, 217, 247);
-    width: 48%;
-    margin-left: 2%;
-}
-
-div.ide div.right {
-    background-color: rgb(208, 230, 254);
-    width: 90%;
-    margin-right: 1%;
-    margin-top: 7%;
-    padding-bottom: 20px;
 }
 
 div.video {
@@ -362,18 +355,9 @@ div.video>div>iframe {
     height: 100%;
 }
 
-div#keyboard {
-    display: inline-block;
-}
-
-img#keyboard {
-    min-width: 400px;
-}
-
 @media only screen and (max-width: 1070px) {
 
     article {
-        display: inline-block;
         margin-left: auto;
         margin-right: auto;
     }
@@ -383,19 +367,9 @@ img#keyboard {
         margin: auto;
     }
 
-    div.assessment div.left {
-        width: 90%;
+    div.left, div.right, div.left.media, div.right.media {
+        width: 95%;
         margin: auto;
-    }
-
-    div.accessibility div.left {
-        width: 85%;
-        margin-left: 1%;
-    }
-
-    div.accessibility div.right {
-        width: 85%;
-        margin-right: 1%;
     }
 
     img#wildcat {
@@ -431,30 +405,38 @@ img#keyboard {
         width: 100%;
     }
 
-    div.textbooks>div.left,
-    div.ide>div.left,
-    div.resources>div.left {
+    div.left.media {
         width: 95%;
-        margin-left: 2%;
-    }
-
-    div.textbooks>div.right,
-    div.ide>div.right {
-        width: 95%;
-        margin-right: 1%;
-    }
-
-    div.resources>div.right {
-        width: 95%;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 2%;
         float: none;
+    }
+
+    div.left, div.right {
+        width: 95%;
+        margin: 2%;
+        float: none;
+    }
+
+    div.right.media {
+        width: 95%;
+        float: none;
+    }
+
+    div#keyboard {
+        float: none;
+        margin-top: 2%;
+        text-align: center;
+    }
+
+    div#keyboard img {
+        display: inline;
+        margin: auto;
     }
 
     div.video {
         float: none;
         width: 100%;
-        margin: auto;
+        margin: 2%;
     }
 
     div.video iframe {
