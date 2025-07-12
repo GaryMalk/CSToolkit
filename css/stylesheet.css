@@ -71,6 +71,16 @@ table {
     border-spacing: 8px;
 }
 
+div.toolkits {
+    margin: auto;
+    text-align: center;
+}
+
+table#toolkits {
+    margin: auto;
+    text-align: left;
+}
+
 div.images {
     width: 95%;
     display: inline-block;
