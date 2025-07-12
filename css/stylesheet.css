@@ -43,11 +43,16 @@ header>nav>ul>li {
 header>nav li a {
     background-color: #264EB5 !important;
     color: #f0f052 !important;
+    text-shadow: 3px 3px 0 #264EB5, 2px -1px 0 #264EB5, -1px 1px 0 #264EB5, 1px 1px 0 #264EB5 !important;
 }
 
 header>nav li:hover a {
-    background-color: #f0f052 !important;
-    color: #264EB5 !important;
+    background-image: url("../images/glitter.gif");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: none;
 }
 
 header>nav>ul a {
@@ -59,6 +64,7 @@ header>nav>ul a {
     margin: 1px !important;
     border-radius: 10px !important;
     background-color: #264EB5 !important;
+    box-shadow: 7px 4px 4px #54596d !important;
 }
 
 table {
