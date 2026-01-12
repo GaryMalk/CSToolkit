@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson: Image Formats for Use in HTML</title>
+</head>
+
+<body>
+
+    <h1>Lesson: Image Formats for Use in HTML</h1>
+
+    <h2>Image File Types / Brief History</h2>
+    <p>Study this lesson and then take the quiz: Image Formats for Use in HTML.</p>
+    <h3><strong>BMP (Bitmap)</strong></h3>
+    <ul>
+        <li>Creation: Developed by Microsoft in the 1987 for Windows 2.0&nbsp;</li>
+        <li>Characteristics: Stores images in a raw, uncompressed, lossless format, resulting in
+            high quality but very large file sizes.&nbsp;</li>
+        <li>Use: Historically used as a default for Windows, it's now less common due to its
+            inefficiency for web use.</li>
+    </ul>
+    <p>BMP is short for bitmap, because that's literally what it is: a raw map of all the pixels in the image. It has no
+        compression. It is is&nbsp;<em>lossless</em> which means it preserves the image 100%. This also means that the
+        files sizes are huge, which made it impractical for use on the Internet.</p>
+    <h3><strong>ICO (Icon) </strong></h3>
+    <ul>
+        <li>Creation: Developed by Microsoft in the 1987 for Windows 2.0&nbsp;</li>
+        <li>ICO has exactly the same format as BMP. Icon files are typically 16&times;16, 32&times;32, 48&times;48, or
+            256&times;256 pixels. You convert a BMP file to ICO simply by resizing it and renaming it to have the ico
+            extension instead of bmp. You can then use the icon for what is known as a&nbsp;<em>favicon</em>. That is
+            the icon displayed in the browser title bar of your website by putting a link like this in the head section:
+            <code>&lt;link rel="icon" type="image/x-icon" href="/images/favicon.ico"&gt;</code>. Read the details
+            here:&nbsp;<a href="https://www.w3schools.com/html/html_favicon.asp" target="_blank"
+                rel="noopener">https://www.w3schools.com/html/html_favicon.asp</a>
+        </li>
+    </ul>
+    <h3><strong>GIF (Graphics Interchange Format)</strong></h3>
+    <ul>
+        <li>Creation: Invented by Steve Wilhite in 1987.</li>
+        <li>Best for: Simple animations, images with a limited color palette (up to 256 colors),
+            and small icons.</li>
+        <li>Characteristics: Supports animation and basic
+            transparency.&nbsp;Its limited color palette makes it less
+            suitable for photographs.</li>
+    </ul>
+    <p>GIFs are still very popular for simple graphics and animations. Animated photos can look pixelated when you zoom
+        in. While they support transparency, they don't support transparency in animation. They have large file sizes
+        compared to the content they deliver, so are not efficient. Modern alternatives that support transparency and
+        animation include APNG (multi-image PNG), WebP, and AVIF.</p>
+    <h3><strong>JPEG / JPG (Joint Photographic Experts Group)</strong></h3>
+    <ul>
+        <li>Creation: The standard was introduced in 1992.</li>
+        <li>Best for: Photographs and images with continuous tones and complex color variations.
+            The most widely used image format for digital photography and web use.</li>
+        <li>Characteristics: Uses lossy compression, which
+            means some data is discarded during compression to achieve smaller file sizes.&nbsp;This can lead to a
+            slight loss of quality, but it's generally
+            unnoticeable in photographs.&nbsp;Does not support
+            transparency.</li>
+    </ul>
+    <h3><strong>PNG (Portable Network Graphics):</strong></h3>
+    <ul>
+        <li>Creation:&nbsp;PNG was created in 1995 by the PNG Development Group as a replacement / improvement over GIF
+            for static images: better compression, full color, transparency, no patent encumbrances.</li>
+        <li>PNG did <strong>not</strong> originally support animation (though later APNG etc fixed that).</li>
+        <li>Best for:&nbsp;Images requiring transparency (e.g., logos, icons, graphics with sharp edges), and images
+            with fewer colors.</li>
+        <li>Characteristics:&nbsp;Uses lossless compression, preserving all image data and ensuring high
+            quality.&nbsp;Supports alpha transparency, allowing for varying levels of opacity.&nbsp;File sizes can be
+            larger than JPEGs for complex images.</li>
+    </ul>
+    <p style="display: inline-block; width: 85%; height: fit-content;"><strong>APNG</strong> is the same format as PNG
+        and the same file extension, "png", but it contains multiple PNG images for animation. A browser which does not
+        understand APNG would simply show the first PNG frame as a static image.</p>
+    <img style="float: right; width: 15%; max-width: 125px; min-width: 40px; height: fit-content; position: relative; top: -40px; padding-right: 5%; margin-right: 3%;"
+        src="../images/Animated_PNG_example_bouncing_beach_ball.png" alt="animated bouncing ball in APNG format" />
+    <p><strong style="font-size: 18px;">SVG (Scalable Vector Graphics):</strong></p>
+    <ul>
+        <li>Creation: World Wide Web Consortium (W3C) first created in 2001</li>
+        <li>Best for:&nbsp;Diagrams, icons, logos, and illustrations that need to scale without losing quality.</li>
+        <li>Characteristics:&nbsp;A vector format, meaning images are defined by mathematical equations rather than
+            pixels.&nbsp;This allows for infinite scalability without pixelation.&nbsp;Can be embedded directly into
+            HTML or used as an external file.</li>
+    </ul>
+    <h3><strong>WebP (Web Picture format):</strong></h3>
+    <ul>
+        <li>Creation: WebP (from Google), introduced around 2010, intended to combine advantages of JPEG, PNG, GIF
+            (lossy, lossless, transparency, animation) with better compression.</li>
+        <li>Best for:&nbsp;Both still images and animated images, offering superior compression compared to JPEG and PNG
+            while maintaining quality.</li>
+        <li>Characteristics:&nbsp;Supports both lossy and lossless compression, as well as transparency and
+            animation.&nbsp;Offers smaller file sizes and faster loading times.</li>
+    </ul>
+    <h3><strong>AVIF (AV1 Image File Format):</strong></h3>
+    <ul>
+        <li>Creation: Alliance for Open Media (AOMedia) finalized the first version in 2019.&nbsp;</li>
+        <li>Best for:&nbsp;High-performance images and animated images, providing excellent compression and quality.
+        </li>
+        <li>Characteristics: A newer format offering even better compression efficiency than WebP. Supports transparency
+            and animation. It uses the AV1 codec (for high compression efficiency) stored in a HEIF container. It
+            supports both lossy &amp; lossless, good color depths, etc.</li>
+    </ul>
+    <h3><span style="font-size: 14pt;"><strong style="font-family: inherit;">Choosing the Right Format:</strong></span>
+    </h3>
+    <div>
+        <div>
+            <ul>
+                <li><strong>Photographs:</strong>&nbsp;JPEG or WebP (for better compression).</li>
+                <li><strong>Logos, Icons, Graphics with Transparency:</strong>&nbsp;PNG, SVG, or WebP.</li>
+                <li><strong>Animations:</strong>&nbsp;GIF (for simple animations), WebP, or AVIF.</li>
+                <li><strong>Scalable Graphics:</strong>&nbsp;SVG.</li>
+            </ul>
+            <p>JPG, GIF, and PNG are the still the most common formats on the
+                Internet, however modern formats WebP and AVIF with superior compression, quality, and features are
+                growing in popularity.</p>
+            <p>JPG, GIF, and PNG are the still the most common formats on the Internet, however modern formats WebP and
+                AVIF with superior compression, quality, and features are growing in popularity.</p>
+        </div>
+    </div>
+    <hr />
+    <h2>Key Concepts and Technical Terms</h2>
+    <ul>
+        <li>
+            <p><strong>Raster vs vector</strong>: Raster images are pixel-based (like JPG, PNG), vector are
+                geometry/path based (SVG). Raster are limited by resolution; vector scale nicely.</p>
+        </li>
+        <li>
+            <p><strong>Lossy vs lossless compression</strong>: Lossy = some data / detail discarded to reduce file size
+                (JPEG lossy, WebP lossy, AVIF lossy versions). Lossless = image is represented without losing
+                information (PNG, lossless WebP, lossless AVIF).</p>
+        </li>
+        <li>
+            <p><strong>Color depth</strong>: Number of bits per pixel / per channel (8-bit per channel, 10/12/16 bits,
+                etc), how many colors can be represented, also whether color space / gamut / HDR etc are supported.</p>
+        </li>
+        <li>
+            <p><strong>Transparency / Alpha channel</strong>: Whether pixels can be partially transparent (e.g. PNG,
+                WebP, AVIF) vs only fully on/off or none.</p>
+        </li>
+    </ul>
+    <p style="padding-left: 40px;">An alpha channel is&nbsp;<mark class="QVRyCf">an additional data layer in digital
+            images and videos that provides transparency information, controlling how opaque or transparent each pixel
+            is</mark>.&nbsp;Represented as a grayscale mask, it determines whether parts of the image are fully visible,
+        fully transparent (invisible), or partially see-through, allowing for effects like compositing, layering, and
+        special effects by blending with other images or backgrounds.</p>
+    <ul>
+        <li>
+            <p><strong>Animation</strong>: Some formats support multiple frames. GIF has long supported, APNG adds that
+                for PNG‐based images, WebP/AVIF have animation support in many cases.</p>
+        </li>
+        <li>
+            <p><strong>Compression artifacts</strong>: Lossy compression can introduce blur, blockiness, color banding,
+                especially with sharp transitions.</p>
+        </li>
+        <li>
+            <p><strong>Progressive rendering / interlacing</strong>: Some image formats support progressive loading
+                (e.g. JPEG progressive, interlaced PNG) so that a low resolution or coarse version appears quickly and
+                then refines.</p>
+        </li>
+        <li>
+            <p><strong>Browser support</strong>: Not all browsers support all formats or all features of each format
+                (e.g. animation, lossless WebP, AVIF etc).</p>
+        </li>
+    </ul>
+    <hr />
+    <h2>The &lt;picture&gt; element and Fallback Images</h2>
+    <p>Most images are linked to HTML pages by using the <code>img</code> element, like so:</p>
+    <p><span class="tagnamecolor" style="font-family: 'courier new', courier;"><span class="tagcolor"><span
+                    class="token tag"><span class="token punctuation">&lt;</span><span style="color: #9242b4;">img
+                    </span><span class="token attr-name" style="color: #03893d;">src</span><span
+                        class="token attr-value"><span class="token punctuation attr-equals">=</span><span
+                            class="token punctuation">"</span>img/img_orange_flowers.jpg<span
+                            class="token punctuation">"</span></span> <span class="token attr-name"
+                        style="color: #03893d;">alt</span><span class="token attr-value"><span
+                            class="token punctuation attr-equals">=</span><span
+                            class="token punctuation">"</span>flowers<span
+                            class="token punctuation">"</span></span><span
+                        class="token punctuation">/&gt;</span></span></span></span></p>
+    <p>where the attribute <code>src</code> contains the path to the image file and <code>alt</code> contains a text
+        description of the image for accessiblity screen readers.</p>
+    <p>However, HTML5 introduced the <code>picture</code> element for responsive design, allowing developers to provide
+        different image sources. The <code>picture</code> element is formatted like so, to accommodate screens that have
+        different widths:</p>
+    <p><span style="font-family: 'courier new', courier;"><span class="token tag"><span
+                    class="token punctuation">&lt;</span><span style="color: #9242b4;">picture</span><span
+                    class="token punctuation">&gt;</span></span> </span><br /><span
+            style="font-family: 'courier new', courier;"><span class="token tag"><span class="token punctuation">&nbsp;
+                    &nbsp;&lt;</span><span style="color: #9242b4;">source </span><span class="token attr-name"
+                    style="color: #03893d;">media</span><span class="token attr-value"><span
+                        class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span
+                        style="color: #2b7abc;">(min-width:650px)</span> </span><span class="token attr-name"
+                    style="color: #03893d;">srcset</span><span class="token attr-value"><span
+                        class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span
+                        style="color: #2b7abc;">img_ping_flowers.jpg</span><span class="token punctuation">"<span
+                            style="color: #990055;"> </span></span></span><span
+                    class="token punctuation">/&gt;</span></span> </span><br /><span
+            style="font-family: 'courier new', courier;"><span class="token tag"><span class="token punctuation">&nbsp;
+                    &nbsp;&lt;</span><span style="color: #9242b4;">source </span><span class="token attr-name"
+                    style="color: #03893d;">media</span><span class="token attr-value"><span
+                        class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span
+                        style="color: #2b7abc;">(min-width:465px)</span> </span><span class="token attr-name"
+                    style="color: #03893d;">srcset</span><span class="token attr-value"><span
+                        class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span
+                        style="color: #2b7abc;">img_white_flower.jpg</span><span
+                        class="token punctuation">"</span></span>&nbsp;<span
+                    class="token punctuation">/&gt;</span></span> </span><br /><span
+            style="font-family: 'courier new', courier;"><span class="token tag"><span class="token punctuation">&nbsp;
+                    &nbsp;&lt;</span><span style="color: #9242b4;">img </span><span class="token attr-name"
+                    style="color: #03893d;">src</span><span class="token attr-value"><span
+                        class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span
+                        style="color: #2b7abc;">img_orange_flowers.jpg</span><span
+                        class="token punctuation">"</span></span> <span class="token attr-name"
+                    style="color: #03893d;">alt</span><span class="token attr-value"><span
+                        class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span
+                        style="color: #2b7abc;">flowers</span><span class="token punctuation">"</span></span> <span
+                    class="token punctuation">/&gt;</span></span> </span><br /><span class="token tag"
+            style="font-family: 'courier new', courier;"><span class="token punctuation">&lt;/</span><span
+                style="color: #9242b4;">picture</span><span class="token punctuation">&gt;</span></span></p>
+    <p>If the available width is too small to accommodate a 650px image, it will fallback to display the 465px image
+        instead. If the screen is too small to display even that, it will display the default jpg at the bottom. Try
+        this out yourself at W3Schools: <a href="https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_picture"
+            target="_blank" rel="noopener">https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_picture</a>.
+        Resize the window to see the image change.</p>
+    <p>You could, of course, use styling to resize a picture dynamically to a percentage of the screen, such as 20% of
+        the width. But resizing happens in the client browser&nbsp;<em>after</em> the entire file has been downloaded.
+        Your website will load faster if you don't force the client to waste time downloading images that are larger
+        than it can display, when it could have selected a smaller image instead.</p>
+    <p>Fallback images can also accommodate browsers that don't support the newest file formats. A developer can support
+        those that do while still providing images for those that don't:</p>
+    <p><span style="font-family: 'courier new', courier;"><span class="token tag"><span
+                    class="token punctuation">&lt;</span><span style="color: #9242b4;">picture</span><span
+                    class="token punctuation">&gt;</span></span> </span><br /><span
+            style="font-family: 'courier new', courier;"><span class="token tag"><span class="token punctuation">&nbsp;
+                    &nbsp;&lt;</span><span style="color: #9242b4;">source </span><span class="token attr-name"
+                    style="color: #03893d;">srcset</span><span class="token attr-value"><span
+                        class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span
+                        style="color: #2b7abc;">photo.avif</span><span class="token punctuation">"</span></span> <span
+                    class="token attr-name" style="color: #03893d;">type</span><span class="token attr-value"><span
+                        class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span
+                        style="color: #2b7abc;">image/avif</span><span class="token punctuation">"</span></span> <span
+                    class="token punctuation">/&gt;</span></span> </span><br /><span
+            style="font-family: 'courier new', courier;"><span class="token tag"><span class="token punctuation">&nbsp;
+                    &nbsp;&lt;</span><span style="color: #9242b4;">source </span><span class="token attr-name"
+                    style="color: #03893d;">srcset</span><span class="token attr-value"><span
+                        class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span
+                        style="color: #2b7abc;">photo.webp</span><span class="token punctuation">"</span></span> <span
+                    class="token attr-name" style="color: #03893d;">type</span><span class="token attr-value"><span
+                        class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span
+                        style="color: #2b7abc;">image/webp</span><span class="token punctuation">"</span></span> <span
+                    class="token punctuation">/&gt;</span></span> </span><br /><span
+            style="font-family: 'courier new', courier;"><span class="token tag"><span class="token punctuation">&nbsp;
+                    &nbsp;&lt;</span><span style="color: #9242b4;">img </span><span class="token attr-name"
+                    style="color: #03893d;">src</span><span class="token attr-value"><span
+                        class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span
+                        style="color: #2b7abc;">photo.jpg</span><span class="token punctuation">"</span></span> <span
+                    class="token attr-name" style="color: #03893d;">alt</span><span class="token attr-value"><span
+                        class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span
+                        style="color: #2b7abc;">photo</span><span class="token punctuation">"</span></span> <span
+                    class="token punctuation">/&gt;</span></span> </span><br /><span class="token tag"
+            style="font-family: 'courier new', courier;"><span class="token punctuation">&lt;/</span><span
+                style="color: #9242b4;">picture</span><span class="token punctuation">&gt;</span></span></p>
+    <p>A browser that supports the picture element will first attempt to load the first image, which in this case is
+        AVIF, specified by the <code>source</code> element. If it doesn't understand the format, it will drop to the
+        second option, which is WebP. Finally, it will drop to the last option on the list, which is a JPEG, which all
+        browers support. If the browser is very old and doesn't even know what the <code>picture</code> element is, it
+        will ignore the outer tag but still load the JPEG file because that is in an <code>img</code> element. For this
+        reason, an <code>img</code> element with a safe format like JPEG should always be the final fallback option.
+        There should <span style="text-decoration: underline;">only be one</span> <code>img</code> element in the
+        <code>picture</code> element, because a browser that doesn't understand <code>picture</code> will display all
+        <code>img</code> elements. The <code>alt</code> attribute on the <code>img</code> tag will be used as the
+        alternate text for whichever picture is displayed, which is why there is no alternative text on the
+        <code>source</code> elements.
+    </p>
+    <hr />
+    <h2><span style="font-size: 18pt;">For More Information</span></h2>
+    <p><strong>Image File Formats</strong></p>
+    <p style="padding-left: 40px;">Mozilla Developer Network: <em>Image file type and format guide:</em> <a
+            href="https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types" target="_blank"
+            rel="noopener">https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Formats/Image_types</a></p>
+    <p style="padding-left: 40px;">Web.Dev: <em>Chosing the right image format</em>: <a
+            href="https://web.dev/articles/choose-the-right-image-format" target="_blank"
+            rel="noopener">https://web.dev/articles/choose-the-right-image-format</a></p>
+    <p style="padding-left: 40px;"><span>Google article on WebP: <em>An image format for the Web</em>: </span><a
+            href="https://developers.google.com/speed/webp" target="_blank"
+            rel="noopener">https://developers.google.com/speed/webp</a></p>
+    <p><strong>Images in HTML&nbsp;</strong></p>
+    <p style="padding-left: 40px;">W3Schools:&nbsp;<em>HTML Images: <a
+                href="https://www.w3schools.com/html/html_images.asp" target="_blank"
+                rel="noopener">https://www.w3schools.com/html/html_images.asp</a></em></p>
+    <p style="padding-left: 40px;">Geeks for Geeks<em>:&nbsp;HTML Images: <a
+                href="https://www.geeksforgeeks.org/html/html-images/" target="_blank"
+                rel="noopener">https://www.geeksforgeeks.org/html/html-images/</a></em></p>
+    <p><strong>&lt;picture&gt; Tag</strong></p>
+    <p style="padding-left: 40px;">W3Schools: <em>HTML &lt;picture&gt; Tag: <a
+                href="https://www.w3schools.com/tags/tag_picture.asp" target="_blank"
+                rel="noopener">https://www.w3schools.com/tags/tag_picture.asp</a>&nbsp;</em></p>
+    <p style="padding-left: 40px;">Mozilla Developer Network: <em>&lt;picture&gt;: The Picture element:</em> <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture" target="_blank"
+            rel="noopener">https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture</a></p>
+    <hr />
+    <h2>Format by Format: Advantages, Disadvantages, Browser Support</h2>
+    <table style="width: 95%; border: 1px solid black;">
+        <tbody>
+            <tr style="color: white; background-color: darkblue;">
+                <td style="border: 1px solid black; width: 70.4214px;" width="64">Format</td>
+                <td style="border: 1px solid black; width: 126.728px;" width="99">Raster/vector?</td>
+                <td style="border: 1px solid black; width: 177.708px;" width="185">Lossless / Lossy / Both</td>
+                <td style="border: 1px solid black; width: 164.81px;" width="159">Transparency / Alpha support</td>
+                <td style="border: 1px solid black; width: 170.407px;" width="164">Animation support</td>
+                <td style="border: 1px solid black; width: 200.748px;" width="195">Typical file sizes (compared)</td>
+                <td style="border: 1px solid black; width: 199.512px;" width="195">Best use-cases</td>
+                <td style="border: 1px solid black; width: 224.654px;" width="220">Weaknesses / Limitations</td>
+                <td style="border: 1px solid black; width: 183.092px;" width="178">Browser / platform support notes</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 70.4214px;">APNG</td>
+                <td style="border: 1px solid black; width: 126.728px;" width="99" data-col-size="sm">Raster / extension
+                    of PNG</td>
+                <td style="border: 1px solid black; width: 177.708px;" width="185" data-col-size="lg">Lossless (since
+                    based on PNG), supports full color &amp; alpha</td>
+                <td style="border: 1px solid black; width: 164.81px;" width="159" data-col-size="lg">Full alpha;
+                    supports complex transparency</td>
+                <td style="border: 1px solid black; width: 170.407px;" width="164" data-col-size="lg">Yes (by
+                    definition)</td>
+                <td style="border: 1px solid black; width: 200.748px;" width="195" data-col-size="xl">Generally larger
+                    than GIF for animations; can be much more efficient when transparency and color fidelity matter, but
+                    not always smallest.</td>
+                <td style="border: 1px solid black; width: 199.512px;" width="195" data-col-size="lg">When you want
+                    animated images but want better quality than GIF (more colors, smoother transparency).</td>
+                <td style="border: 1px solid black; width: 224.654px;" width="220" data-col-size="xl">Larger file sizes;
+                    less tooling/everyday usage than GIF; some older browsers might not support animation; slight
+                    overhead.</td>
+                <td style="border: 1px solid black; width: 183.092px;" width="178">Modern browsers support APNG in
+                    general (Chrome, Firefox, Safari, etc). Backwards compatibility: non-APNG decoders show only first
+                    frame.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 70.4214px;">AVIF</td>
+                <td style="border: 1px solid black; width: 126.728px;" width="99" data-col-size="sm">Raster</td>
+                <td style="border: 1px solid black; width: 177.708px;" width="185" data-col-size="lg">Both lossless
+                    &amp; lossy</td>
+                <td style="border: 1px solid black; width: 164.81px;" width="159" data-col-size="lg">Yes: supports alpha
+                    channel; supports high color depth, HDR etc (depending on implementations)</td>
+                <td style="border: 1px solid black; width: 170.407px;" width="164" data-col-size="lg">Yes: supports
+                    animation/sequences in many cases.</td>
+                <td style="border: 1px solid black; width: 200.748px;" width="195">Among the best in compression
+                    efficiency: for similar visual quality, often gives smaller files than WebP or JPEG or PNG,
+                    especially in photographic or mixed images.&nbsp;</td>
+                <td style="border: 1px solid black; width: 199.512px;" width="195" data-col-size="lg">Use when you want
+                    high quality / small size; photography; high res; where performance / bandwidth are critical;
+                    progressive image delivery (with fallbacks).</td>
+                <td style="border: 1px solid black; width: 224.654px;" width="220" data-col-size="xl">Encoding tools are
+                    newer / fewer; encoding may be slower; not all browsers support all features; sometimes less mature
+                    tooling; for some uses fallback needed. Also, for some simple graphics or icons, vector formats
+                    (SVG) might be better.</td>
+                <td style="border: 1px solid black; width: 183.092px;" width="178">Support is increasingly good: most
+                    modern browsers (Chrome, Firefox, Edge) support AVIF. Safari more recent versions support. For older
+                    legacy browsers, fallback required.&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 70.4214px;">BMP</td>
+                <td style="border: 1px solid black; width: 126.728px;" width="99" data-col-size="sm">Raster</td>
+                <td style="border: 1px solid black; width: 177.708px;" width="185">Usually uncompressed, so effectively
+                    lossless</td>
+                <td style="border: 1px solid black; width: 164.81px;" width="159" data-col-size="lg">Typically no alpha,
+                    though BMP variant may support (rare)</td>
+                <td style="border: 1px solid black; width: 170.407px;" width="164" data-col-size="lg">No animation</td>
+                <td style="border: 1px solid black; width: 200.748px;" width="195" data-col-size="xl">Huge file sizes;
+                    inefficient.</td>
+                <td style="border: 1px solid black; width: 199.512px;" width="195" data-col-size="lg">Rarely used on the
+                    web for visible images; sometimes in legacy systems or for internal use.</td>
+                <td style="border: 1px solid black; width: 224.654px;" width="220" data-col-size="xl">Very large files;
+                    inefficient; not optimized for transmission; lack of web-friendly features.</td>
+                <td style="border: 1px solid black; width: 183.092px;" width="178">Supported by browsers to display BMP
+                    (some support), but impractical. Because of size, generally avoided. MDN notes BMP is supported by
+                    major browsers but not usual.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 70.4214px;">GIF</td>
+                <td style="border: 1px solid black; width: 126.728px;" width="99" data-col-size="sm">Raster</td>
+                <td style="border: 1px solid black; width: 177.708px;" width="185" data-col-size="lg">Lossless in the
+                    sense of exact frames, but very limited palette (256 colors) so color loss/palette quantization may
+                    occur.</td>
+                <td style="border: 1px solid black; width: 164.81px;" width="159" data-col-size="lg">Supports binary
+                    transparency (on/off) only, no partial; limited color palette.</td>
+                <td style="border: 1px solid black; width: 170.407px;" width="164" data-col-size="lg">Yes, animation has
+                    long been one of its defining features.</td>
+                <td style="border: 1px solid black; width: 200.748px;" width="195" data-col-size="xl">For animation or
+                    simple graphics GIFs can be okay; for anything complex, very inefficient compared to newer formats.
+                </td>
+                <td style="border: 1px solid black; width: 199.512px;" width="195" data-col-size="lg">Simple animations,
+                    memes, small icons with animation; when backward compatibility necessary.</td>
+                <td style="border: 1px solid black; width: 224.654px;" width="220" data-col-size="xl">Very limited
+                    colors; large file size for animations; no smooth transparency; sometimes large bandwidth / slow;
+                    poor image quality for non-graphic content.</td>
+                <td style="border: 1px solid black; width: 183.092px;" width="178" data-col-size="xl">Supported
+                    everywhere (oldest browser support). But many new browsers also support animated WebP etc.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 70.4214px;">ICO</td>
+                <td style="border: 1px solid black; width: 126.728px;" width="99" data-col-size="sm">Raster (icon
+                    format)</td>
+                <td style="border: 1px solid black; width: 177.708px;" width="185" data-col-size="lg">Usually lossless /
+                    simple palette or small color depth; can contain multiple sizes in one file</td>
+                <td style="border: 1px solid black; width: 164.81px;" width="159" data-col-size="lg">Supports
+                    transparency (binary or alpha depending on version)</td>
+                <td style="border: 1px solid black; width: 170.407px;" width="164" data-col-size="lg">No animation in
+                    typical usage</td>
+                <td style="border: 1px solid black; width: 200.748px;" width="195" data-col-size="xl">Typically small
+                    (icons), but because multiple resolutions can be embedded, file size can vary.</td>
+                <td style="border: 1px solid black; width: 199.512px;" width="195" data-col-size="lg">Favicons, small
+                    icons in UI, where part of system or browser uses .ico.</td>
+                <td style="border: 1px solid black; width: 224.654px;" width="220" data-col-size="xl">Not suitable for
+                    full-scale images; limited in color depth / resolution for many
+                    uses; mixing this format beyond icons rare.</td>
+                <td style="border: 1px solid black; width: 183.092px;" width="178">Universally supported by browsers for
+                    favicons etc; OS tools and design tools recognize it. MDN includes ICO among formats supported by
+                    browsers.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 70.4214px;">JPEG / JPG</td>
+                <td style="border: 1px solid black; width: 126.728px;" width="99" data-col-size="sm">Raster</td>
+                <td style="border: 1px solid black; width: 177.708px;" width="185">Lossy only (some variants like
+                    JPEG-2000 have more, but not typical)</td>
+                <td style="border: 1px solid black; width: 164.81px;" width="159" data-col-size="lg">No true alpha
+                    transparency (no alpha channel); supports opaque.</td>
+                <td style="border: 1px solid black; width: 170.407px;" width="164" data-col-size="lg">No animation</td>
+                <td style="border: 1px solid black; width: 200.748px;" width="195" data-col-size="xl">Very efficient for
+                    photographs/complex continuous-tone images; much smaller sizes
+                    than PNG for such images.</td>
+                <td style="border: 1px solid black; width: 199.512px;" width="195" data-col-size="lg">Photographs,
+                    images with lots of color gradients, real-world scenes.</td>
+                <td style="border: 1px solid black; width: 224.654px;" width="220" data-col-size="xl">Loss of quality if
+                    compressed too much; artifacts especially around edges; not
+                    good for text, logos, sharp edges; no transparency; repeated edits degrade quality.</td>
+                <td style="border: 1px solid black; width: 183.092px;" width="178" data-col-size="xl">Universally
+                    supported in all browsers, all devices. Very old and stable.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 70.4214px;">PNG</td>
+                <td style="border: 1px solid black; width: 126.728px;" width="99" data-col-size="sm">Raster</td>
+                <td style="border: 1px solid black; width: 177.708px;" width="185">Lossless (typical PNG)</td>
+                <td style="border: 1px solid black; width: 164.81px;" width="159" data-col-size="lg">Full alpha (256
+                    levels), both PNG-8 (indexed color, limited palette) and PNG-24 /
+                    PNG-32 (truecolor + alpha) etc</td>
+                <td style="border: 1px solid black; width: 170.407px;" width="164" data-col-size="lg">No built-in
+                    animation in standard PNG; extended formats (APNG or MNG) handle
+                    animation.</td>
+                <td style="border: 1px solid black; width: 200.748px;" width="195" data-col-size="xl">Larger than JPEG
+                    for photos; for simple graphics (logos, UI) can be efficient,
+                    especially when limited palette used.</td>
+                <td style="border: 1px solid black; width: 199.512px;" width="195" data-col-size="lg">Logos, icons, UI
+                    elements, images needing sharp edges or text, transparency;
+                    screenshots; diagrams.</td>
+                <td style="border: 1px solid black; width: 224.654px;" width="220" data-col-size="xl">File size large
+                    for photographic images; slower to compress / decompress; may
+                    load slower especially on large images; no built in animation (unless APNG).</td>
+                <td style="border: 1px solid black; width: 183.092px;" width="178">Supported by all browsers. PNG has
+                    been around a long time. APNG support is good in modern browsers.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 70.4214px;">SVG</td>
+                <td style="border: 1px solid black; width: 126.728px;" width="99" data-col-size="sm">Vector (though can
+                    embed raster)</td>
+                <td style="border: 1px solid black; width: 177.708px;" width="185" data-col-size="lg">N/A in same sense;
+                    vector format; compression is different (file size depends on
+                    complexity, not pixel count)</td>
+                <td style="border: 1px solid black; width: 164.81px;" width="159" data-col-size="lg">Yes: SVG supports
+                    transparency and complex shapes etc; you can manipulate via
+                    CSS/JS; can scale arbitrarily.</td>
+                <td style="border: 1px solid black; width: 170.407px;" width="164" data-col-size="lg">Limited / via
+                    scripts; SVG itself can be animated (via SMIL, CSS, or JS), but
+                    animation is usually differently handled than raster animation formats.</td>
+                <td style="border: 1px solid black; width: 200.748px;" width="195" data-col-size="xl">For graphics,
+                    logos, icons with few shapes, very small file sizes; if SVG is
+                    complex, with many paths, gradient fills, embedded images, file size can grow.</td>
+                <td style="border: 1px solid black; width: 199.512px;" width="195" data-col-size="lg">Logos, icons, UI
+                    graphics, charts, diagrams, vector drawings; any place you need
+                    sharp scaling or resolution-independence.</td>
+                <td style="border: 1px solid black; width: 224.654px;" width="220" data-col-size="xl">Not suitable for
+                    complex photographic images; performance of very large or
+                    complex SVGs may suffer; sometimes cross-browser quirks; security when allowing user-supplied SVGs
+                    (scripts inside).</td>
+                <td style="border: 1px solid black; width: 183.092px;" width="178">All modern browsers support SVG
+                    rendering well. Some older browsers had issues but generally safe now.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; width: 70.4214px;">WebP</td>
+                <td style="border: 1px solid black; width: 126.728px;" width="99" data-col-size="sm">Raster</td>
+                <td style="border: 1px solid black; width: 177.708px;" width="185" data-col-size="lg">Both lossy &amp;
+                    lossless modes supported</td>
+                <td style="border: 1px solid black; width: 164.81px;" width="159" data-col-size="lg">Yes: alpha
+                    transparency supported in both modes; lossy and lossless modes include
+                    that.</td>
+                <td style="border: 1px solid black; width: 170.407px;" width="164" data-col-size="lg">Yes: animated WebP
+                    is supported.</td>
+                <td style="border: 1px solid black; width: 200.748px;" width="195">Offers significantly better
+                    compression than JPG or PNG for similar quality; lossy WebP often beats JPEG, and lossless WebP can
+                    beat PNG for many images.&nbsp;</td>
+                <td style="border: 1px solid black; width: 199.512px;" width="195" data-col-size="lg">Good general use:
+                    photos, images with transparency, animations; replacement for
+                    many cases of JPG/PNG/GIF.</td>
+                <td style="border: 1px solid black; width: 224.654px;" width="220" data-col-size="xl">Encoding/decoding
+                    overhead (both time and CPU) may be higher; older browsers
+                    (especially older mobile, older IE) may not support; some tools may not support WebP fully;
+                    sometimes metadata / color profile issues.</td>
+                <td style="border: 1px solid black; width: 183.092px;" width="178">As of 2025, well supported by all
+                    major modern browsers (Chrome, Firefox, Edge, Safari etc). Some considerations for fallbacks.</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <h2>&ldquo;Which format is best for what&rdquo; &ndash; Decision Guidelines</h2>
+    <div class="_tableContainer_1rjym_1">
+        <div class="group w-fit _tableWrapper_1rjym_13 flex flex-col-reverse">
+            <table class="w-fit min-w-(--thread-content-width)" style="border: 1px solid black;">
+                <thead>
+                    <tr style="color: white; background-color: darkblue;">
+                        <th data-col-size="md">Situation / Requirement</th>
+                        <th data-col-size="lg">Best Format Choices</th>
+                        <th data-col-size="xl">Why</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid black;" data-col-size="md">Photographs / images with many colors,
+                            detailed gradients, scenes (people, landscapes)</td>
+                        <td style="border: 1px solid black;" data-col-size="lg">JPEG (lossy) or next-gen lossy like WebP
+                            or AVIF</td>
+                        <td style="border: 1px solid black;" data-col-size="xl">Because lossy compressions work very
+                            well for photos, human eye tolerates small imperceptible losses. WebP/AVIF often get same
+                            visual quality at smaller size.</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black;" data-col-size="md">Logos, icons, UI graphics, images with
+                            sharp lines, text inside the image</td>
+                        <td style="border: 1px solid black;" data-col-size="lg">SVG (if vector) or PNG (lossless) or
+                            lossless WebP / AVIF</td>
+                        <td style="border: 1px solid black;" data-col-size="xl">You want crisp edges, exact colors,
+                            possibly transparency; lossy JPEG tends to blur edges, introduce artifacts; vector SVG
+                            scales without losing quality.</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black;" data-col-size="md">Transparent backgrounds / alpha</td>
+                        <td style="border: 1px solid black;" data-col-size="lg">PNG, WebP, AVIF</td>
+                        <td style="border: 1px solid black;" data-col-size="xl">Need full alpha channel; GIF has only
+                            binary transparency; JPEG has none.</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black;" data-col-size="md">Animation / small motion graphic (e.g. a
+                            short looping animation)</td>
+                        <td style="border: 1px solid black;" data-col-size="lg">WebP (animated), APNG, GIF (if backward
+                            compatibility mandatory)</td>
+                        <td style="border: 1px solid black;" data-col-size="xl">WebP/AVIF animations tend to be more
+                            efficient / higher quality; APNG better quality than GIF but size may be larger; GIF is
+                            universal but poor quality &amp; palette limitations.</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black;" data-col-size="md">Where file size / bandwidth / page load
+                            performance is critical</td>
+                        <td style="border: 1px solid black;" data-col-size="lg">WebP / AVIF (lossy for photos; lossless
+                            when required)</td>
+                        <td style="border: 1px solid black;" data-col-size="xl">These modern formats often give best
+                            compression per perceptual quality; using multiple formats with fallbacks where needed.</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black;" data-col-size="md">Legacy browser support / maximum
+                            compatibility</td>
+                        <td style="border: 1px solid black;" data-col-size="lg">JPEG, PNG, GIF; possibly ICO for icons
+                        </td>
+                        <td style="border: 1px solid black;" data-col-size="xl">These are safe bet formats almost
+                            universally supported. Use fallback sources.</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid black;" data-col-size="md">Scalability (responsive, high DPI /
+                            retina)</td>
+                        <td style="border: 1px solid black;" data-col-size="lg">SVG for vector; for raster, generate
+                            multiple sizes / responsive formats + modern formats (e.g. WebP/AVIF), include proper
+                            <code>srcset</code> / <code>picture</code></td>
+                        <td style="border: 1px solid black;" data-col-size="xl">To avoid serving an enormous high-res
+                            image where not needed; vector avoids scaling issues entirely.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <hr />
+    <h2>Browser Support Summary</h2>
+    <ul>
+        <li>
+            <p><strong>PNG, JPEG, GIF,
+                    ICO</strong> &ndash; universally supported in all modern browsers and backwards. No real concern
+                here.</p>
+        </li>
+        <li>
+            <p><strong>SVG</strong> &ndash; good
+                support across modern browsers; older IE versions had quirks; some mobile-browser-versions might have
+                minor issues especially in scripting/interaction. But generally very safe now.</p>
+        </li>
+        <li>
+            <p><strong>APNG</strong> &ndash;
+                well supported in current browsers; older ones may fallback to showing only first frame.<span class=""
+                    data-state="closed"><span
+                        class="ms-1 inline-flex max-w-full items-center relative top-[-0.094rem] animate-[show_150ms_ease-in]"
+                        data-testid="webpage-citation-pill"><a
+                            class="flex h-4.5 overflow-hidden rounded-xl px-2 text-[9px] font-medium text-token-text-secondary! bg-[#F4F4F4]! dark:bg-[#303030]! transition-colors duration-150 ease-in-out"
+                            href="https://en.wikipedia.org/wiki/APNG?utm_source=chatgpt.com" target="_blank"
+                            rel="noopener"></a></span></span></p>
+        </li>
+        <li>
+            <p><strong>WebP</strong> &ndash;
+                broadly supported in recent major browsers; some older or niche browsers or certain mobile OS versions
+                may not support, so fallback strategy often needed.</p>
+        </li>
+        <li>
+            <p><strong>AVIF</strong> &ndash;
+                support is rapidly increasing. Major browsers support it. But because it&rsquo;s newer, there may be
+                performance / encoding quality variation; fewer tools historically. Fallbacks are wise if audience may
+                include older browsers.</p>
+        </li>
+    </ul>
+    <hr />
+    <h2>Tools / Applications for Conversion, Resizing, Editing</h2>
+    <div class="_tableContainer_1rjym_1">
+        <div class="group w-fit _tableWrapper_1rjym_13 flex flex-col-reverse">
+            <table class="w-fit min-w-(--thread-content-width)"
+                style="border: 1px solid black; width: 99.9301%; height: 674.233px;">
+                <thead>
+                    <tr style="color: white; background-color: darkblue; height: 50.8807px;">
+                        <th style="border: 1px solid black; width: 16.9592%; height: 50.8807px;" data-col-size="md">Tool
+                            / App</th>
+                        <th style="border: 1px solid black; width: 9.09576%; height: 50.8807px;">Type</th>
+                        <th style="border: 1px solid black; width: 28.3432%; height: 50.8807px;" data-col-size="lg">
+                            Supports which formats</th>
+                        <th style="border: 1px solid black; width: 14.671%; height: 50.8807px;" data-col-size="sm">Free
+                            / Paid / OSS notes</th>
+                        <th style="border: 1px solid black; width: 30.8669%; height: 50.8807px;" data-col-size="lg">Key
+                            features relevant to web images (conversion, resizing, quality settings etc)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="height: 59.6591px;">
+                        <td style="border: 1px solid black; width: 16.9592%; height: 59.6591px;" data-col-size="md"><a
+                                class="inline_disabled" href="https://www.gimp.org" target="_blank"
+                                rel="noopener"><strong>GIMP</strong></a> (GNU Image
+                            Manipulation Program)</td>
+                        <td style="border: 1px solid black; width: 9.09576%; height: 59.6591px;">Desktop</td>
+                        <td style="border: 1px solid black; width: 28.3432%; height: 59.6591px;" data-col-size="lg">PNG,
+                            JPG, GIF; import/export; via plugins or newer versions maybe WebP; some support for AVIF via
+                            plugin</td>
+                        <td style="border: 1px solid black; width: 14.671%; height: 59.6591px;" data-col-size="sm">Free
+                            / open source</td>
+                        <td style="border: 1px solid black; width: 30.8669%; height: 59.6591px;" data-col-size="lg">Good
+                            for editing, resizing, optimizing; export quality settings, resizing, cropping etc.</td>
+                    </tr>
+                    <tr style="height: 52.8693px;">
+                        <td style="border: 1px solid black; width: 16.9592%; height: 52.8693px;" data-col-size="md"><a
+                                class="inline_disabled" href="https://krita.org/en/" target="_blank"
+                                rel="noopener"><strong>Krita</strong></a></td>
+                        <td style="border: 1px solid black; width: 9.09576%; height: 52.8693px;">Desktop</td>
+                        <td style="border: 1px solid black; width: 28.3432%; height: 52.8693px;" data-col-size="lg">
+                            Similar to GIMP; also supports modern formats via plugins or newer versions</td>
+                        <td style="border: 1px solid black; width: 14.671%; height: 52.8693px;" data-col-size="sm">Free
+                            / OSS</td>
+                        <td style="border: 1px solid black; width: 30.8669%; height: 52.8693px;" data-col-size="lg">Good
+                            for graphics, vectorish, etc.</td>
+                    </tr>
+                    <tr style="height: 59.6591px;">
+                        <td style="border: 1px solid black; width: 16.9592%; height: 59.6591px;" data-col-size="md"><a
+                                class="inline_disabled" href="https://imagemagick.org/" target="_blank"
+                                rel="noopener"><strong>ImageMagick</strong></a> / <a
+                                href="http://www.graphicsmagick.org/"><strong>GraphicsMagick</strong> </a>(command-line)
+                        </td>
+                        <td style="border: 1px solid black; width: 9.09576%; height: 59.6591px;">Command Line</td>
+                        <td style="border: 1px solid black; width: 28.3432%; height: 59.6591px;" data-col-size="lg">Very
+                            broad format support, including WebP, PNG, JPG; AVIF via appropriate libraries; ICO etc</td>
+                        <td style="border: 1px solid black; width: 14.671%; height: 59.6591px;" data-col-size="sm">Free
+                            / OSS</td>
+                        <td style="border: 1px solid black; width: 30.8669%; height: 59.6591px;" data-col-size="lg">Very
+                            powerful for batch conversion, resizing, format switching; scripting; quality tuning etc.
+                        </td>
+                    </tr>
+                    <tr style="height: 59.6591px;">
+                        <td style="border: 1px solid black; width: 16.9592%; height: 59.6591px;" data-col-size="md"><a
+                                href="https://squoosh.app/"><strong>Squoosh.app</strong></a> (by Google)</td>
+                        <td style="border: 1px solid black; width: 9.09576%; height: 59.6591px;">Web, but can be used in
+                            offline mode</td>
+                        <td style="border: 1px solid black; width: 28.3432%; height: 59.6591px;" data-col-size="lg">
+                            WebP, AVIF, JPEG, PNG etc</td>
+                        <td style="border: 1px solid black; width: 14.671%; height: 59.6591px;" data-col-size="sm">Free
+                            (web-app)</td>
+                        <td style="border: 1px solid black; width: 30.8669%; height: 59.6591px;" data-col-size="lg">
+                            Great for interactive compression quality vs size trade-offs; see previews; resize; convert.
+                        </td>
+                    </tr>
+                    <tr style="height: 59.6591px;">
+                        <td style="border: 1px solid black; width: 16.9592%; height: 59.6591px;" data-col-size="md"><a
+                                class="inline_disabled" href="https://ffmpeg.org/" target="_blank"
+                                rel="noopener"><strong>FFmpeg</strong></a></td>
+                        <td style="border: 1px solid black; width: 9.09576%; height: 59.6591px;">Web</td>
+                        <td style="border: 1px solid black; width: 28.3432%; height: 59.6591px;" data-col-size="lg">
+                            Mainly video, but also image sequences; WebP / AVIF / etc via encoders; used for animations
+                            etc.</td>
+                        <td style="border: 1px solid black; width: 14.671%; height: 59.6591px;" data-col-size="sm">Free
+                            / OSS</td>
+                        <td style="border: 1px solid black; width: 30.8669%; height: 59.6591px;" data-col-size="lg">
+                            Useful for converting animations, batch processing.</td>
+                    </tr>
+                    <tr style="height: 32.5426px;">
+                        <td style="border: 1px solid black; width: 16.9592%; height: 32.5426px;" data-col-size="md"><a
+                                href="https://www.irfanview.com/"><strong>IrfanView</strong> </a>(Windows)</td>
+                        <td style="border: 1px solid black; width: 9.09576%; height: 32.5426px;">Desktop</td>
+                        <td style="border: 1px solid black; width: 28.3432%; height: 32.5426px;" data-col-size="lg">
+                            Supports many formats via plugins; WebP etc; ICO etc</td>
+                        <td style="border: 1px solid black; width: 14.671%; height: 32.5426px;" data-col-size="sm">Free
+                            for personal use</td>
+                        <td style="border: 1px solid black; width: 30.8669%; height: 32.5426px;" data-col-size="lg">Good
+                            for batch conversion and viewing.</td>
+                    </tr>
+                    <tr style="height: 32.5426px;">
+                        <td style="border: 1px solid black; width: 16.9592%; height: 32.5426px;" data-col-size="md">
+                            <strong><a href="https://www.xnview.com/en/xnconvert/">XnConvert </a>/ <a
+                                    href="https://www.xnview.com/en/">XnView</a></strong>
+                        </td>
+                        <td style="border: 1px solid black; width: 9.09576%; height: 32.5426px;">Desktop</td>
+                        <td style="border: 1px solid black; width: 28.3432%; height: 32.5426px;" data-col-size="lg">
+                            Multiple formats; convert &amp; resize in bulk</td>
+                        <td style="border: 1px solid black; width: 14.671%; height: 32.5426px;" data-col-size="sm">
+                            Freemium / free for many uses</td>
+                        <td style="border: 1px solid black; width: 30.8669%; height: 32.5426px;" data-col-size="lg">Bulk
+                            operations, preview, many input/output formats.</td>
+                    </tr>
+                    <tr style="height: 28.8778px;">
+                        <td style="border: 1px solid black; width: 16.9592%; height: 28.8778px;"><a
+                                href="https://www.inpixio.com/en/mb/inpixio-photo-studio"><strong>Pixlr</strong></a>
+                        </td>
+                        <td style="border: 1px solid black; width: 9.09576%; height: 28.8778px;">Web</td>
+                        <td style="border: 1px solid black; width: 28.3432%; height: 28.8778px;">JPG, PNG, WebP, etc.
+                        </td>
+                        <td style="border: 1px solid black; width: 14.671%; height: 28.8778px;">ads</td>
+                        <td style="border: 1px solid black; width: 30.8669%; height: 28.8778px;">Online editing,
+                            conversion, resizing</td>
+                    </tr>
+                    <tr style="height: 31.875px;">
+                        <td style="border: 1px solid black; width: 16.9592%; height: 31.875px;"><a
+                                href="https://pixelied.com/"><strong>Pixelied</strong></a></td>
+                        <td style="border: 1px solid black; width: 9.09576%; height: 31.875px;">Web</td>
+                        <td style="border: 1px solid black; width: 28.3432%; height: 31.875px;">JPG, PNG, WebP, SVG</td>
+                        <td style="border: 1px solid black; width: 14.671%; height: 31.875px;">limited</td>
+                        <td style="border: 1px solid black; width: 30.8669%; height: 31.875px;">Online editing,
+                            resizing, background removal</td>
+                    </tr>
+                    <tr style="height: 28.8778px;">
+                        <td style="border: 1px solid black; width: 16.9592%; height: 28.8778px;"><a
+                                href="https://cloudconvert.com/"><strong>CloudConvert</strong></a></td>
+                        <td style="border: 1px solid black; width: 9.09576%; height: 28.8778px;">Web</td>
+                        <td style="border: 1px solid black; width: 28.3432%; height: 28.8778px;">200+ formats including
+                            JPG, PNG, GIF, WebP, AVIF, SVG</td>
+                        <td style="border: 1px solid black; width: 14.671%; height: 28.8778px;">limited free conversions
+                        </td>
+                        <td style="border: 1px solid black; width: 30.8669%; height: 28.8778px;">Cloud-based file
+                            conversion</td>
+                    </tr>
+                    <tr style="height: 28.8778px;">
+                        <td style="border: 1px solid black; width: 16.9592%; height: 28.8778px;"><a
+                                href="https://convertio.co/"><strong>Convertio</strong></a></td>
+                        <td style="border: 1px solid black; width: 9.09576%; height: 28.8778px;">Web</td>
+                        <td style="border: 1px solid black; width: 28.3432%; height: 28.8778px;">JPG, PNG, GIF, WebP,
+                            AVIF, SVG, ICO, BMP, etc.</td>
+                        <td style="border: 1px solid black; width: 14.671%; height: 28.8778px;">limited free conversions
+                        </td>
+                        <td style="border: 1px solid black; width: 30.8669%; height: 28.8778px;">Online conversion tool
+                        </td>
+                    </tr>
+                    <tr style="height: 59.6591px;">
+                        <td style="border: 1px solid black; width: 16.9592%; height: 59.6591px;" data-col-size="md"><a
+                                href="https://www.adobe.com/products/photoshop/landpa.html"><strong>Adobe
+                                    Photoshop</strong></a></td>
+                        <td style="border: 1px solid black; width: 9.09576%; height: 59.6591px;">Desktop</td>
+                        <td style="border: 1px solid black; width: 28.3432%; height: 59.6591px;" data-col-size="lg">
+                            Supports almost all formats (JPEG, PNG, GIF, SVG somewhat, WebP, AVIF via newer versions or
+                            plugins).</td>
+                        <td style="border: 1px solid black; width: 14.671%; height: 59.6591px;" data-col-size="sm">Paid
+                        </td>
+                        <td style="border: 1px solid black; width: 30.8669%; height: 59.6591px;" data-col-size="lg">Very
+                            capable; offers fine control over quality, compression, metadata; resizing with high quality
+                            filters.</td>
+                    </tr>
+                    <tr style="height: 59.7159px;">
+                        <td style="border: 1px solid black; width: 16.9592%; height: 59.7159px;" data-col-size="md"><a
+                                href="https://github.com/lovell/avif-cli"><strong>avif-cli</strong></a></td>
+                        <td style="border: 1px solid black; width: 9.09576%; height: 59.7159px;">Command Line</td>
+                        <td style="border: 1px solid black; width: 28.3432%; height: 59.7159px;" data-col-size="lg">
+                            Converts <span class="Yjhzub">PNG, JPEG, JPG, GIF, TIFF, BMP, SVG, and WebP into AVIF</span>
+                        </td>
+                        <td style="border: 1px solid black; width: 14.671%; height: 59.7159px;" data-col-size="sm">Free
+                            / open source</td>
+                        <td style="border: 1px solid black; width: 30.8669%; height: 59.7159px;" data-col-size="lg">
+                            Allow more fine-grained control over encoder settings, batch conversions, automating for
+                            websites / build pipelines. Install from node.js or download source code from GitHub.</td>
+                    </tr>
+                    <tr style="height: 28.8778px;">
+                        <td style="border: 1px solid black; width: 16.9592%; height: 28.8778px;"><a
+                                href="https://developers.google.com/speed/webp/download"><strong>cwebp and other WebP
+                                    tools</strong></a></td>
+                        <td style="border: 1px solid black; width: 9.09576%; height: 28.8778px;">Command Line</td>
+                        <td style="border: 1px solid black; width: 28.3432%; height: 28.8778px;">Converts JPG, PNG, and
+                            TIFF to WebP</td>
+                        <td style="border: 1px solid black; width: 14.671%; height: 59.7159px;" data-col-size="sm">Free
+                            / open source</td>
+                        <td style="border: 1px solid black; width: 30.8669%; height: 59.7159px;" data-col-size="lg">
+                            Allow more fine-grained control over encoder settings, batch conversions, automating for
+                            websites / build pipelines.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <p>&nbsp;</p>
+</body>
+
+</html>

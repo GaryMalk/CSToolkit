@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson: Embedding Multimedia</title>
+</head>
+
+<body>
+    <p>The Internet today is all about streaming and embedding multimedia, and your website will be more compelling if
+        you take advantage of it. You have learned how to add images, colors, fonts, and styling to your website. This
+        lesson is about adding videos, PowerPoint presentations, and Google Slides with the proper aspect ratio and to
+        have them size responsively with the size of the browser window.</p>
+    <h2 class="otQkpb" role="heading" aria-level="3" data-processed="true">Local Video</h2>
+    <div class="otQkpb" role="heading" aria-level="3" data-processed="true">For your website's own video, you don't need
+        an iframe. You could simply link it with the <span
+            style="font-family: 'courier new', courier;">&lt;video&gt;</span> tag:</div>
+    <div class="otQkpb" role="heading" aria-level="3" data-processed="true">
+        <div class="r1PmQe" data-hveid="CAkQAA" data-processed="true">
+            <div data-processed="true">
+                <div class="pHpOfb" data-animation-atomic="" data-processed="true">
+                    <div class="pCTyYe" data-processed="true">
+                        <pre data-processed="true"><code data-processed="true"><span class="undefined" data-processed="true">&lt;video class="center" width="80%" controls autoplay&gt;<br />&nbsp; &nbsp;&lt;source src="images/video/myvideo.mp4" type="video/mp4"&gt;<br />&nbsp; &nbsp;Your browser does not support the video tag.<br />&lt;/video&gt;
+</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="otQkpb" role="heading" aria-level="3" data-processed="true">You don't need to set the height or do
+        anything special, because the video element will communicate to the browser what size it needs to stay
+        proportional to the width you select.</p>
+    <p class="otQkpb" role="heading" aria-level="3" data-processed="true"><span style="text-decoration: underline;">To
+            save bandwidth and get better playback performance, however, I do recommend that you upload your videos to
+            YouTube or some other streaming platform instead, and insert them into your site with the iframe
+            element</span>. You may do it either way. For short animations, this might not matter. But if we stream from
+        other platforms, we need the <span style="font-family: 'courier new', courier;">&lt;iframe&gt;</span> tag.</p>
+    <h2>Using the <span style="font-family: 'courier new', courier;">&lt;iframe&gt;</span> tag</h2>
+    <p>The purpose of iframe is frame another webpage within your site. This is commonly done for framing videos. The
+        basic attributes are <span style="font-family: 'courier new', courier;">src</span>, <span
+            style="font-family: 'courier new', courier;">width</span>, and <span
+            style="font-family: 'courier new', courier;">height</span>:</p>
+    <p style="padding-left: 40px;"><span class="tagnamecolor" style="font-family: 'courier new', courier;"><span
+                class="tagcolor">&lt;</span><span style="color: #9242b4;">iframe</span><span
+                class="attributecolor"><span style="color: #9242b4;">&nbsp;</span><span
+                    style="color: #0e68b3;">src</span><span class="attributevaluecolor">="<span
+                        style="color: #03893d;">/default.asp</span>"</span>&nbsp;<span
+                    style="color: #0e68b3;">width</span><span class="attributevaluecolor">="<span
+                        style="color: #03893d;">100%</span>"</span>&nbsp;<span
+                    style="color: #0e68b3;">height</span><span class="attributevaluecolor">="<span
+                        style="color: #03893d;">300</span>"</span></span><span
+                class="tagcolor">&gt;</span></span><br /><span class="tagnamecolor"
+            style="font-family: 'courier new', courier;"><span class="tagcolor">&lt;</span>/<span
+                style="color: #9242b4;">iframe</span><span class="tagcolor">&gt;</span></span></p>
+    <p><span class="tagnamecolor"><span class="tagcolor">For a full list of attributes, see: <a
+                    href="https://www.w3schools.com/tags/tag_iframe.ASP" target="_blank"
+                    rel="noopener">https://www.w3schools.com/tags/tag_iframe.ASP</a></span></span></p>
+    <p><span class="tagnamecolor"><span class="tagcolor">For security, iframe is not able to communicate to the browser
+                or control your webpage. This unfortunately means that it can't even communicate its size. You will
+                notice if you grab the default embed code from YouTube, it will give you preset width="560" and
+                height="315". You can change that, but you want to keep the right aspect ratio or your video height will
+                be chopped off (if too short) or have a black section (if too long). Width as a percentage is based on
+                the screen size, so iff you set the width to 100% you will get your video to be the full width of your
+                screen.&nbsp;<em>Perfect</em>, you think, just set them both to 100%. <em>Wrong</em>. Because height
+                doesn't know what 100% means. It will just give you 150 pixels which will suck.</span></span></p>
+    <p><span class="tagnamecolor"><span class="tagcolor">What you need to do is to put the iframe inside another
+                container and let the container handle the height through a little trick. What you need for YouTube as
+                well as PowerPoint and Google Slides is a 16:9 aspect ratio, which is precisely 56.25%. We know the
+                width, it's just the size of your screen <em>or of the container you put the iframe in</em> (more about
+                that in a moment). What you need then, is a height which is precisely 56.25% of the width. The trick to
+                set this is to use padding-bottom (or you could use padding-top instead). Set <span
+                    style="font-family: 'courier new', courier;">padding-bottom: 56.25%</span></span></span><span
+            class="tagnamecolor"><span class="tagcolor">&nbsp;on the container.</span></span></p>
+    <p><span class="tagnamecolor"><span class="tagcolor">But you also have to get the iframe to play along. To do that,
+                you have to use some of the tricks we learned about with positioning. What we want is for the iframe to
+                exactly match the container. To do that, we will use&nbsp;<em>absolute</em> positioning and set top and
+                left to 0. And as you learned, absolute positioning bases the position of the element on its first
+                ancestor that uses <em>relative </em>positioning, so we have to set the parent container to relative. We
+                will also set <code class="mv6bHd">overflow: hidden</code><span> to prevent content from overflowing and
+                    causing unwanted scrollbars or layout issues.</span></span></span></p>
+    <p><span class="tagnamecolor"><span class="tagcolor"><span>YouTube and PowerPoint will also give some values you
+                    don't need. You want to delete the height and width attributes from the html code and let the CSS
+                    styling handle all of that, as we've discussed. But they also give you <span
+                        style="font-family: 'courier new', courier;">frameborder="0"</span> to prevent black lines
+                    around your media. But the html validator tool rejects that as outdated. You want to delete that
+                    from the html, too, and put <span style="font-family: 'courier new', courier;">border: none</span>
+                    on the iframe in CSS instead.</span></span></span></p>
+    <p><span class="tagnamecolor"><span class="tagcolor"><span>Putting it all together, your CSS looks like
+                    this:</span></span></span></p>
+    <div class="r1PmQe" data-hveid="CBEQAA" data-processed="true">
+        <div data-processed="true">
+            <div class="pHpOfb" data-animation-atomic="" data-processed="true">
+                <div class="pCTyYe" data-processed="true">
+                    <pre data-processed="true"><code data-processed="true"><span class="undefined" data-processed="true">.video-container {
+  position: relative; </span><span class="ClTQqc" data-processed="true">/* Required for absolute positioning of iframe */</span><span class="undefined" data-processed="true">
+  width: </span><span class="tnfcCf" data-processed="true">100%</span><span class="undefined" data-processed="true">;
+  height: </span><span class="tnfcCf" data-processed="true">0</span><span class="undefined" data-processed="true">; </span><span class="ClTQqc" data-processed="true">/* Creates an element with no height */</span><span class="undefined" data-processed="true">
+  overflow: hidden; /* Prevents overflowing content creating scrollbars */
+  padding-bottom: </span><span class="tnfcCf" data-processed="true">56.25%</span><span class="undefined" data-processed="true">; </span><span class="ClTQqc" data-processed="true">/* 9 / 16 = 0.5625 */</span><span class="undefined" data-processed="true">
+}
+
+.video-container iframe {
+  position: absolute; </span><span class="ClTQqc" data-processed="true">/* Positions iframe relative to the container */</span><span class="undefined" data-processed="true">
+  top: </span><span class="tnfcCf" data-processed="true">0</span><span class="undefined" data-processed="true">;
+  left: </span><span class="tnfcCf" data-processed="true">0</span><span class="undefined" data-processed="true">;
+  width: </span><span class="tnfcCf" data-processed="true">100%</span><span class="undefined" data-processed="true">;
+  height: </span><span class="tnfcCf" data-processed="true">100%</span><span class="undefined" data-processed="true">;<br />  border: none;
+}
+</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Y3BBE" data-hveid="CBIQAA" data-processed="true">and your HTML code looks like this:</div>
+    <div class="r1PmQe" data-hveid="CAYQAA" data-processed="true">
+        <div data-processed="true">
+            <div class="pHpOfb" data-animation-atomic="" data-processed="true">
+                <div class="pCTyYe" data-processed="true">
+                    <pre data-processed="true"><code data-processed="true"><span class="undefined" data-processed="true">&lt;</span><span class="mexSqb" data-processed="true">div</span><span class="undefined" data-processed="true"> class=</span><span class="CS0cqb" data-processed="true">"video-container"</span><span class="undefined" data-processed="true">&gt;
+  &lt;</span><span class="mexSqb" data-processed="true">iframe</span><span class="undefined" data-processed="true">
+    src=</span><span class="CS0cqb" data-processed="true">"https://www.youtube.com/embed/VIDEO_ID"</span><span class="undefined" data-processed="true">
+    title=</span><span class="CS0cqb" data-processed="true">"YouTube video player"</span>
+<span class="undefined" data-processed="true">    allow=</span><span class="CS0cqb" data-processed="true">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"</span><span class="undefined" data-processed="true">
+    allowfullscreen
+  &gt;&lt;/</span><span class="mexSqb" data-processed="true">iframe</span><span class="undefined" data-processed="true">&gt;
+&lt;/</span><span class="mexSqb" data-processed="true">div</span><span class="undefined" data-processed="true">&gt;
+</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p><strong>NOTE</strong>: I will deduct points if you don't change the title from the default "YouTube video player"
+        to whatever your video or presentation is actually about!</p>
+    <p>Your video container doesn't need to be sized with width=100% of your screen area, though, only your iframe needs
+        to do that. You can adjust the width to fit your layout. You can even have multiple widths by adding extra
+        classes. For example, if I wanted some videos to be full page (100%), some to be half page (say 45% to allow
+        some padding), and some quarter page (again, I'll use 20% to allow myself some wiggle room), I can do that by
+        adding customized classes to override the width. In the CSS, I stack classes with the dot "." In the HTML, I
+        stack them by having spaces between them:</p>
+    <div class="r1PmQe" data-hveid="CBEQAA" data-processed="true">
+        <div data-processed="true">
+            <div class="pHpOfb" data-animation-atomic="" data-processed="true">
+                <div class="pCTyYe" data-processed="true">
+                    <pre data-processed="true"><code data-processed="true"><span class="undefined" data-processed="true">.video-container {
+  position: relative; </span><span class="ClTQqc" data-processed="true">/* Required for absolute positioning of iframe */</span><span class="undefined" data-processed="true">
+  width: </span><span class="tnfcCf" data-processed="true">100%</span><span class="undefined" data-processed="true">;
+  height: </span><span class="tnfcCf" data-processed="true">0</span><span class="undefined" data-processed="true">; </span><span class="ClTQqc" data-processed="true">/* Creates an element with no height */</span><span class="undefined" data-processed="true">
+  overflow: hidden; /* Prevents overflowing content creating scrollbars */
+  padding-bottom: </span><span class="tnfcCf" data-processed="true">56.25%</span><span class="undefined" data-processed="true">; </span><span class="ClTQqc" data-processed="true">/* 9 / 16 = 0.5625 */</span><span class="undefined" data-processed="true">
+}<br /><br />.video-container.half {
+  width: <span class="tnfcCf" data-processed="true">45%</span>; /* will inherit all the above values but override width */
+}<br /><br />.video-container.quarter {
+  width: 2<span class="tnfcCf" data-processed="true">0%</span>; /* will inherit all the above values but override width */ }<br />
+.video-container iframe {
+  position: absolute; </span><span class="ClTQqc" data-processed="true">/* Positions iframe relative to the container */</span><span class="undefined" data-processed="true">
+  top: </span><span class="tnfcCf" data-processed="true">0</span><span class="undefined" data-processed="true">;
+  left: </span><span class="tnfcCf" data-processed="true">0</span><span class="undefined" data-processed="true">;
+  width: </span><span class="tnfcCf" data-processed="true">100%</span><span class="undefined" data-processed="true">;
+  height: </span><span class="tnfcCf" data-processed="true">100%</span><span class="undefined" data-processed="true">;<br />  border: none;
+}
+</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Y3BBE" data-hveid="CBIQAA" data-processed="true">and your HTML code looks like this, for videos you want
+        in a quarter width:</div>
+    <div class="r1PmQe" data-hveid="CAYQAA" data-processed="true">
+        <div data-processed="true">
+            <div class="pHpOfb" data-animation-atomic="" data-processed="true">
+                <div class="pCTyYe" data-processed="true">
+                    <pre data-processed="true"><code data-processed="true"><span class="undefined" data-processed="true">&lt;</span><span class="mexSqb" data-processed="true">div</span><span class="undefined" data-processed="true"> class=</span><span class="CS0cqb" data-processed="true">"video-container quarter"</span><span class="undefined" data-processed="true">&gt;
+  &lt;</span><span class="mexSqb" data-processed="true">iframe</span><span class="undefined" data-processed="true">
+    src=</span><span class="CS0cqb" data-processed="true">"https://www.youtube.com/embed/VIDEO_ID"</span><span class="undefined" data-processed="true">
+    title=</span><span class="CS0cqb" data-processed="true">"YouTube video player"</span>
+<span class="undefined" data-processed="true">    allow=</span><span class="CS0cqb" data-processed="true">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"</span><span class="undefined" data-processed="true">
+    allowfullscreen
+  &gt;&lt;/</span><span class="mexSqb" data-processed="true">iframe</span><span class="undefined" data-processed="true">&gt;
+&lt;/</span><span class="mexSqb" data-processed="true">div</span><span class="undefined" data-processed="true">&gt;
+</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>You only need to adjust the container; leave the iframe formatting exactly as before.</p>
+    <p>This "padding hack" method will work with all browsers. However, there is also a newer, simpler method that will
+        work with the latest browsers by using the modern<span>&nbsp;</span><code class="o8j0Mc"
+            data-processed="true">aspect-ratio</code><span>&nbsp;</span>CSS property:</p>
+    <div class="r1PmQe" data-hveid="CAkQAA" data-processed="true">
+        <div data-processed="true">
+            <div class="pHpOfb" data-animation-atomic="" data-processed="true">
+                <div class="pCTyYe" data-processed="true">
+                    <pre data-processed="true"><code data-processed="true"><span class="undefined" data-processed="true">.video-container {
+  width: </span><span class="tnfcCf" data-processed="true">100%</span><span class="undefined" data-processed="true">;
+  aspect-ratio: </span><span class="tnfcCf" data-processed="true">16</span><span class="undefined" data-processed="true"> / </span><span class="tnfcCf" data-processed="true">9</span><span class="undefined" data-processed="true">; </span><span class="ClTQqc" data-processed="true">/* Sets a 16:9 aspect ratio */</span><span class="undefined" data-processed="true">
+}
+.video-container iframe {
+  width: </span><span class="tnfcCf" data-processed="true">100%</span><span class="undefined" data-processed="true">;
+  height: </span><span class="tnfcCf" data-processed="true">100%</span><span class="undefined" data-processed="true">;<br />  border: none;<br />}
+</span></code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="otQkpb" role="heading" aria-level="3" data-processed="true">This is much easier, but older browers won't
+        support it. The "padding-hack" is a long-standing method that is safer.</div>
+    <h2 class="otQkpb" role="heading" aria-level="3" data-processed="true">Getting Embed Code</h2>
+    <h3 class="otQkpb" role="heading" aria-level="3" data-processed="true">YouTube</h3>
+    <ol style="list-style-type: decimal;">
+        <li class="otQkpb" role="heading" aria-level="3" data-processed="true">Navigate to the video you want.</li>
+        <li class="otQkpb" role="heading" aria-level="3" data-processed="true">Click the Share button</li>
+        <li class="otQkpb" role="heading" aria-level="3" data-processed="true">Click the Embed button</li>
+        <li class="otQkpb" role="heading" aria-level="3" data-processed="true">Copy the code</li>
+    </ol>
+    <p>The code will look something like this:</p>
+    <p>&lt;iframe <span style="color: #c71f23;"><span style="color: #e62429;">width="560" height="315"</span>
+        </span>src="https://www.youtube.com/embed/XlUjyAk_ftA?si=6r6Klf3xzSnRoC6Q" title="<span
+            style="color: #e62429;"><em>YouTube video player</em></span>" <span
+            style="color: #e62429;">frameborder="0"</span> allow="accelerometer; autoplay; clipboard-write;
+        encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen&gt;&lt;/iframe&gt;</p>
+    <p>Be sure to <strong><span style="color: #e62429;">remove the code in red: height, width, and
+                frameborder</span></strong>, and to <strong><em>change the title</em></strong>.</p>
+    <div class="otQkpb" role="heading" aria-level="3" data-processed="true">
+        <div class="r1PmQe" data-hveid="CAkQAA" data-processed="true">
+            <div data-processed="true">
+                <div class="pHpOfb" data-animation-atomic="" data-processed="true">
+                    <div class="pCTyYe" data-processed="true">
+                        <pre
+                            data-processed="true">&lt;iframe src="https://www.youtube.com/embed/XlUjyAk_ftA?si=6r6Klf3xzSnRoC6Q"<br />   title="Steve Martin, Martin Short, &amp; Selena Gomez Q&amp;A"<br />   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"<br />   referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;<br />&lt;/iframe&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p><strong>NOTE:</strong> You will not be able to view YouTube videos embedded in HTML files that are on your local
+        system. You must upload them to the web server first. When you are working on your page, you will see this Error
+        153 message. Don't panic - this is normal. You won't be able to test your web page until after you push it to
+        the server. PowerPoint and Google Docs don't have this problem.</p>
+    <p><img id="287114389" src="../images/YouTube_error153.webp" alt="YouTube_error153.webp" /></p>
+    <h3>PowerPoint</h3>
+    <ol style="list-style-type: decimal;">
+        <li>To share a PowerPoint presentation, save it first to a personal OneDrive. <span
+                style="text-decoration: underline;">Embedding a presentation you've saved the school OneDrive won't work
+                because that's SharePoint. It won't let you share it outside of LWTech</span>. You can tell the
+            difference from the URL: the URL to the LWTech OneDrive is <a href="https://lwtech.sharepoint.com/"
+                target="_blank" rel="noopener">https://lwtech.sharepoint.com/</a>. The URL to a personal OneDrive will
+            start <a href="https://onedrive.live.com/" target="_blank" rel="noopener">https://onedrive.live.com/</a>.
+        </li>
+        <li>Open up your OneDrive in a browser. Click My Files and navigate to the saved presentation file.</li>
+        <li>Click the three dots next to the name to bring up the context menu and select Embed.</li>
+        <li>When the Embed dialog appears, click "Copy embed code"</li>
+    </ol>
+    <p>The code will look something like this:</p>
+    <p>&lt;iframe src="https://1drv.ms/p/c/cc1b7ab97fbc565f/IQSmeu-Am8iSR4GYhp0jzuslAXVJjehnbLDe0KKBoYd8pEE" <span
+            style="color: #e62429;">width="402" height="327" frameborder="0"</span> scrolling="no"&gt;&lt;/iframe&gt;
+    </p>
+    <p>Again, <strong><span style="color: #e62429;">delete the width, height, and frameborder</span></strong>. There is
+        no title generated by PowerPoint <strong><span style="text-decoration: underline;">but you should give it
+                one</span></strong>.</p>
+    <div class="otQkpb" role="heading" aria-level="3" data-processed="true">
+        <div class="r1PmQe" data-hveid="CAkQAA" data-processed="true">
+            <div data-processed="true">
+                <div class="pHpOfb" data-animation-atomic="" data-processed="true">
+                    <div class="pCTyYe" data-processed="true">
+                        <pre
+                            data-processed="true">&lt;iframe title="Algorithms: Trees"<br />   src="https://1drv.ms/p/c/cc1b7ab97fbc565f/IQSmeu-Am8iSR4GYhp0jzuslAXVJjehnbLDe0KKBoYd8pEE"<br />   scrolling="no"&gt;<br />&lt;/iframe&gt;</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3>Google Slides</h3>
+    <p>Google Slides doesn't generate embed code for you, but it's simple to create.</p>
+    <ol style="list-style-type: decimal;">
+        <li>Open Google Drive and navigate to your Google Slides presentation. It should be listed on a row.</li>
+        <li>Click the three dots at the end of the row and select Share.</li>
+        <li>Change General access to "Anyone with the link" (<span style="text-decoration: underline;">not</span>
+            "Restricted") and be sure "Viewer" is selected in the drop down, not "Editor".</li>
+        <li>Copy the link.</li>
+    </ol>
+    <p>The link will look something like this:</p>
+    <p>https://docs.google.com/presentation/d/1HEQ9mt0JKsIEZ33gcGoc-DS7l73YMIPa3l6nU6BZ7WE/<span
+            style="color: #e62429;">edit?usp=sharing</span></p>
+    <p>You want to replace "edit" with "embed". In this case, I also set three values:</p>
+    <ul>
+        <li>start=true so the slideshow will begin when the page is loaded</li>
+        <li>loop=true so the show will continuously loop until stopped</li>
+        <li>delayms=3000 set the delay to 3000 microseconds, which is 3 seconds, so the page has a chance to finish
+            loading all the other elements before the slide show begins</li>
+    </ul>
+    <p>You can modify these values, as desired.</p>
+    <p>The edited URL:</p>
+    <p>https://docs.google.com/presentation/d/1HEQ9mt0JKsIEZ33gcGoc-DS7l73YMIPa3l6nU6BZ7WE/<strong><span
+                style="color: #0e68b3;">embed?start=true&amp;loop=true&amp;delayms=3000"</span></strong></p>
+    <p>I then added a title and the keyword to allow full screen:</p>
+    <div class="otQkpb" role="heading" aria-level="3" data-processed="true">
+        <div class="r1PmQe" data-hveid="CAkQAA" data-processed="true">
+            <div data-processed="true">
+                <div class="pHpOfb" data-animation-atomic="" data-processed="true">
+                    <div class="pCTyYe" data-processed="true">
+                        <pre
+                            data-processed="true"><code data-processed="true"><span class="undefined" data-processed="true">&lt;iframe title="Gary Malkasian: A little about me"<br />&nbsp; &nbsp;src="https://docs.google.com/presentation/d/1HEQ9mt0JKsIEZ33gcGoc-DS7l73YMIPa3l6nU6BZ7WE/embed?start=true&amp;loop=true&amp;delayms=3000"<br />&nbsp; &nbsp;allowfullscreen&gt;<br />&lt;/iframe&gt;</span></code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>This iframe will work with the 16:9 aspect ratio box just like PowerPoint presentations and YouTube videos.</p>
+    <h2 class="otQkpb" role="heading" aria-level="3" data-processed="true">References</h2>
+    <p><a href="https://www.w3schools.com/tags/tag_iframe.ASP" target="_blank"
+            rel="noopener">https://www.w3schools.com/tags/tag_iframe.ASP</a><br /><a
+            href="https://www.w3schools.com/howto/howto_css_responsive_iframes.asp" target="_blank"
+            rel="noopener">https://www.w3schools.com/howto/howto_css_responsive_iframes.asp</a><br /><a
+            href="https://www.siteground.com/kb/what-is-iframe/" target="_blank"
+            rel="noopener">https://www.siteground.com/kb/what-is-iframe/</a><br /><a
+            href="https://www.w3schools.com/cssref/css_pr_aspect-ratio.php" target="_blank"
+            rel="noopener">https://www.w3schools.com/cssref/css_pr_aspect-ratio.php</a><br /><a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio" target="_blank"
+            rel="noopener">https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio</a></p>
+</body>
+
+</html>
